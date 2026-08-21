@@ -28,14 +28,8 @@
 
     <style>
       .n  { font-family: ui-sans-serif, -apple-system, "SF Pro Display", "Segoe UI", Inter, Helvetica, Arial, sans-serif; }
-      tspan.l { opacity: 0; animation: pop 9s ease-out infinite; }
-      @keyframes pop {
-        0%   { opacity: 0; }
-        7%   { opacity: 1; }
-        88%  { opacity: 1; }
-        96%  { opacity: 0; }
-        100% { opacity: 0; }
-      }
+      tspan.l { animation: pop .7s ease-out both; }
+      @keyframes pop { from { opacity: 0 } to { opacity: 1 } }
       tspan.l:nth-of-type(1)  { animation-delay: .00s }
       tspan.l:nth-of-type(2)  { animation-delay: .06s }
       tspan.l:nth-of-type(3)  { animation-delay: .12s }
@@ -79,13 +73,10 @@
         100% { transform: translateX(980px); }
       }
 
-      .pill { opacity: 0; animation: rise 9s ease-out infinite; transform-box: fill-box; }
+      .pill { animation: rise .8s ease-out both; transform-box: fill-box; }
       @keyframes rise {
-        0%   { opacity: 0; transform: translateY(8px); }
-        12%  { opacity: 1; transform: translateY(0); }
-        90%  { opacity: 1; transform: translateY(0); }
-        97%  { opacity: 0; transform: translateY(-6px); }
-        100% { opacity: 0; transform: translateY(-6px); }
+        from { opacity: 0; transform: translateY(8px); }
+        to   { opacity: 1; transform: translateY(0); }
       }
       .p1 { animation-delay: .9s } .p2 { animation-delay: 1.05s } .p3 { animation-delay: 1.2s }
       .p4 { animation-delay: 1.35s } .p5 { animation-delay: 1.5s } .p6 { animation-delay: 1.65s }

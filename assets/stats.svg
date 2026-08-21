@@ -12,21 +12,13 @@
   <style>
     .f { font-family: ui-sans-serif, -apple-system, "SF Pro Text", "Segoe UI", Inter, Helvetica, Arial, sans-serif; }
     .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
-    .in { opacity: 0; animation: in 14s ease-out infinite; transform-box: fill-box; }
+    .in { animation: in 1s ease-out both; transform-box: fill-box; }
     @keyframes in {
-      0%   { opacity: 0; transform: translateY(10px); }
-      5%   { opacity: 1; transform: translateY(0); }
-      92%  { opacity: 1; transform: translateY(0); }
-      98%  { opacity: 0; transform: translateY(-6px); }
-      100% { opacity: 0; transform: translateY(-6px); }
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
-    .bar { animation: grow 14s cubic-bezier(.22,1,.36,1) infinite; transform-box: fill-box; transform-origin: left center; }
-    @keyframes grow {
-      0%   { transform: scaleX(0); }
-      12%  { transform: scaleX(1); }
-      94%  { transform: scaleX(1); }
-      100% { transform: scaleX(0); }
-    }
+    .bar { animation: grow 1.6s cubic-bezier(.22,1,.36,1) both; transform-box: fill-box; transform-origin: left center; }
+    @keyframes grow { from { transform: scaleX(0) } to { transform: scaleX(1) } }
     .sweep3 { animation: sw3 14s cubic-bezier(.4,0,.2,1) infinite; }
     @keyframes sw3 {
       0% { transform: translateX(-300px) } 14% { transform: translateX(1010px) } 100% { transform: translateX(1010px) }

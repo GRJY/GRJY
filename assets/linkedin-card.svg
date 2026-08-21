@@ -24,13 +24,10 @@
   <style>
     .f { font-family: ui-sans-serif, -apple-system, "SF Pro Text", "Segoe UI", Inter, Helvetica, Arial, sans-serif; }
     .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
-    .in { opacity: 0; animation: lin 13s cubic-bezier(.22,1,.36,1) infinite; transform-box: fill-box; }
+    .in { animation: lin 1s cubic-bezier(.22,1,.36,1) both; transform-box: fill-box; }
     @keyframes lin {
-      0%   { opacity: 0; transform: translateY(12px); }
-      5%   { opacity: 1; transform: translateY(0); }
-      93%  { opacity: 1; transform: translateY(0); }
-      99%  { opacity: 0; transform: translateY(-8px); }
-      100% { opacity: 0; transform: translateY(-8px); }
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
     .ring { animation: spin 9s linear infinite; transform-box: fill-box; transform-origin: center; }
     @keyframes spin { from { transform: rotate(0) } to { transform: rotate(360deg) } }

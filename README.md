@@ -1,21 +1,21 @@
 <p align="center">
-  <img src="./assets/header.svg" width="880" alt="Giray Akbulut — Full Stack & iOS Developer"/>
+  <img src="./assets/header.svg?v=2" width="880" alt="Giray Akbulut — Full Stack & iOS Developer"/>
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/giray-akbulut-33a695219/"><img src="./assets/badge-linkedin.svg" height="40" alt="LinkedIn"/></a>
-  <a href="mailto:akbulutgiray@gmail.com"><img src="./assets/badge-email.svg" height="40" alt="Email"/></a>
-  <a href="https://github.com/GRJY?tab=repositories"><img src="./assets/badge-github.svg" height="40" alt="Projects"/></a>
-  <img src="./assets/badge-location.svg" height="40" alt="İstanbul, Türkiye"/>
+  <a href="https://www.linkedin.com/in/giray-akbulut-33a695219/"><img src="./assets/badge-linkedin.svg?v=2" height="40" alt="LinkedIn"/></a>
+  <a href="mailto:akbulutgiray@gmail.com"><img src="./assets/badge-email.svg?v=2" height="40" alt="Email"/></a>
+  <a href="https://github.com/GRJY?tab=repositories"><img src="./assets/badge-github.svg?v=2" height="40" alt="Projects"/></a>
+  <img src="./assets/badge-location.svg?v=2" height="40" alt="İstanbul, Türkiye"/>
 </p>
 
 <p align="center">
-  <img src="./assets/about.svg" width="880" alt="What I build — on-device ML, end-to-end crypto, native Apple apps, full-stack web"/>
+  <img src="./assets/about.svg?v=2" width="880" alt="What I build — on-device ML, end-to-end crypto, native Apple apps, full-stack web"/>
 </p>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/giray-akbulut-33a695219/">
-    <img src="./assets/linkedin-card.svg" width="880" alt="LinkedIn — Giray Akbulut, Full Stack & iOS Developer"/>
+    <img src="./assets/linkedin-card.svg?v=2" width="880" alt="LinkedIn — Giray Akbulut, Full Stack & iOS Developer"/>
   </a>
 </p>
 
@@ -25,7 +25,7 @@
 
 <p align="center">
   <a href="https://github.com/GRJY?tab=repositories">
-    <img src="./assets/showcase.svg" width="880" alt="Repository showcase — public projects and private client platforms"/>
+    <img src="./assets/showcase.svg?v=2" width="880" alt="Repository showcase — public projects and private client platforms"/>
   </a>
 </p>
 
@@ -95,7 +95,7 @@
 ### 📊 GitHub
 
 <p align="center">
-  <img src="./assets/stats.svg" width="880" alt="GitHub statistics"/>
+  <img src="./assets/stats.svg?v=2" width="880" alt="GitHub statistics"/>
 </p>
 
 <p align="center">

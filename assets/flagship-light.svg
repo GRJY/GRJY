@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="212" viewBox="0 0 880 212" role="img" aria-label="Flagship work — Valego and Business Turkey">
+<style>
+  :root {
+    --canvas:  #ffffff;
+    --surface: #f6f8fa;
+    --line:    #d1d9e0;
+    --fg:      #1f2328;
+    --muted:   #59636e;
+    --faint:   #818b98;
+    --accent:  #0969da;
+  }
+  text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif; }
+  .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+  .fg { fill: var(--fg); }
+  .mut { fill: var(--muted); }
+  .fnt { fill: var(--faint); }
+  .acc { fill: var(--accent); }
+  .surf { fill: var(--surface); }
+  .canvas { fill: var(--canvas); }
+  .line-f { fill: var(--line); }
+  .line-s { stroke: var(--line); }
+  .display { font-size: 42px; font-weight: 600; letter-spacing: -1.25px; }
+  .lead { font-size: 16.5px; font-weight: 500; letter-spacing: -0.2px; }
+  .body { font-size: 13px; }
+  .small { font-size: 11.5px; }
+  .title { font-size: 13.5px; font-weight: 600; letter-spacing: -0.1px; }
+  .metric { font-size: 30px; font-weight: 600; letter-spacing: -0.8px;
+            font-variant-numeric: tabular-nums; }
+  .eyebrow { font-size: 10px; font-weight: 600; letter-spacing: 1.6px; }
+  .e { animation: e 260ms cubic-bezier(0.23, 1, 0.32, 1) both; transform-box: fill-box; }
+  @keyframes e {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .grow { animation: grow 520ms cubic-bezier(0.23, 1, 0.32, 1) both; transform-box: fill-box;
+          transform-origin: left center; }
+  @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @media (prefers-reduced-motion: reduce) {
+    .e, .grow { animation: none; }
+  }
+</style>
+<rect width="880" height="212" class="canvas"/>
+<g class="e">
+<text x="0" y="22" class="eyebrow fnt">FLAGSHIP WORK</text>
+<rect x="103" y="18" width="777" height="1" class="line-f"/>
+</g>
+<defs><clipPath id="ic0"><rect x="18" y="62" width="48" height="48" rx="11"/></clipPath></defs>
+<g class="e" style="animation-delay:45ms">
+<rect x="0" y="44" width="431" height="152" rx="10" class="surf line-s"/>
+<image clip-path="url(#ic0)" x="18" y="62" width="48" height="48" href="data:image/png;base64,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"/>
+<rect x="18" y="62" width="48" height="48" rx="11" fill="none" class="line-s"/>
+<text x="78" y="86" class="lead fg">Valego</text>
+<text x="78" y="106" class="small fnt">Valet, parking, wash and transfer in one panel</text>
+<text x="18" y="136" class="small mut">Corporate valet platform — QR handover, live vehicle tracking and a</text>
+<text x="18" y="153" class="small mut">single operations panel for hotels, malls and residences.</text>
+<circle cx="22" cy="174" r="4.4" fill="#FF2D20"/>
+<text x="33" y="178" class="small fnt">Laravel · Flutter · MySQL</text>
+<text x="413" y="178" class="small fnt" text-anchor="end">854 commits</text>
+<g transform="translate(365,70)" fill="none" stroke="var(--faint)" stroke-width="1.3">
+<path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09" fill="var(--faint)" stroke="none" transform="scale(0.52)"/>
+<rect x="20" y="1.5" width="9" height="11" rx="2.2"/>
+<circle cx="22.6" cy="4.6" r=".7" fill="var(--faint)" stroke="none"/>
+<circle cx="26.4" cy="4.6" r=".7" fill="var(--faint)" stroke="none"/>
+<circle cx="41" cy="7" r="5.6"/>
+<ellipse cx="41" cy="7" rx="2.4" ry="5.6"/>
+<path d="M35.6 7h10.8"/>
+</g>
+</g>
+<defs><clipPath id="ic1"><rect x="467" y="62" width="48" height="48" rx="11"/></clipPath></defs>
+<g class="e" style="animation-delay:90ms">
+<rect x="449" y="44" width="431" height="152" rx="10" class="surf line-s"/>
+<image clip-path="url(#ic1)" x="467" y="62" width="48" height="48" href="data:image/png;base64,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"/>
+<rect x="467" y="62" width="48" height="48" rx="11" fill="none" class="line-s"/>
+<text x="527" y="86" class="lead fg">Business Turkey</text>
+<text x="527" y="106" class="small fnt">B2B platform, web and mobile</text>
+<text x="467" y="136" class="small mut">Corporate B2B platform with a central management console and a</text>
+<text x="467" y="153" class="small mut">companion mobile app for member companies.</text>
+<circle cx="471" cy="174" r="4.4" fill="#4F5D95"/>
+<text x="482" y="178" class="small fnt">PHP · Laravel · TypeScript · Flutter</text>
+<text x="862" y="178" class="small fnt" text-anchor="end">811 commits</text>
+<g transform="translate(814,70)" fill="none" stroke="var(--faint)" stroke-width="1.3">
+<path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09" fill="var(--faint)" stroke="none" transform="scale(0.52)"/>
+<rect x="20" y="1.5" width="9" height="11" rx="2.2"/>
+<circle cx="22.6" cy="4.6" r=".7" fill="var(--faint)" stroke="none"/>
+<circle cx="26.4" cy="4.6" r=".7" fill="var(--faint)" stroke="none"/>
+<circle cx="41" cy="7" r="5.6"/>
+<ellipse cx="41" cy="7" rx="2.4" ry="5.6"/>
+<path d="M35.6 7h10.8"/>
+</g>
+</g>
+</svg>

@@ -99,6 +99,75 @@ def capabilities(theme):
     return "capabilities", p
 
 
+
+# ------------------------------------------------------------- flagship
+
+APPLE = ("M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 "
+         "3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 "
+         "3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 "
+         "1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 "
+         "2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09")
+
+FLAGSHIP = [
+    ("app-valego.png", "Valego", "Valet, parking, wash and transfer in one panel",
+     ["Corporate valet platform — QR handover, live vehicle tracking and a",
+      "single operations panel for hotels, malls and residences."],
+     "Laravel", "Laravel · Flutter · MySQL", "854 commits"),
+    ("app-businessturkey.png", "Business Turkey", "B2B platform, web and mobile",
+     ["Corporate B2B platform with a central management console and a",
+      "companion mobile app for member companies."],
+     "PHP", "PHP · Laravel · TypeScript · Flutter", "811 commits"),
+]
+
+
+def platform_row(x, y, accent="var(--faint)"):
+    """Apple mark, an Android-ish handset and a globe — where the product ships."""
+    o = [f'<g transform="translate({x},{y})" fill="none" stroke="{accent}" stroke-width="1.3">']
+    o.append(f'<path d="{APPLE}" fill="{accent}" stroke="none" transform="scale(0.52)"/>')
+    o.append('<rect x="20" y="1.5" width="9" height="11" rx="2.2"/>')
+    o.append(f'<circle cx="22.6" cy="4.6" r=".7" fill="{accent}" stroke="none"/>')
+    o.append(f'<circle cx="26.4" cy="4.6" r=".7" fill="{accent}" stroke="none"/>')
+    o.append('<circle cx="41" cy="7" r="5.6"/>')
+    o.append('<ellipse cx="41" cy="7" rx="2.4" ry="5.6"/>')
+    o.append('<path d="M35.6 7h10.8"/>')
+    o.append('</g>')
+    return o
+
+
+def flagship(theme):
+    h = 212
+    card_w, card_h, card_y = 431, 152, 44
+    p = open_svg(h, "Flagship work — Valego and Business Turkey", theme)
+    p += eyebrow_row(0, 22, "FLAGSHIP WORK", W)
+    icons = {}
+    for i, (icon, title, sub, lines, lang, stack, commits) in enumerate(FLAGSHIP):
+        x = i * (card_w + 18)
+        d = STEP + i * STEP
+        data = base64.b64encode((ASSETS / icon).read_bytes()).decode()
+        p.append(f'<defs><clipPath id="ic{i}">'
+                 f'<rect x="{x + 18}" y="{card_y + 18}" width="48" height="48" rx="11"/>'
+                 f'</clipPath></defs>')
+        p.append(f'<g class="e"{delay(d)}>')
+        p.append(f'<rect x="{x}" y="{card_y}" width="{card_w}" height="{card_h}" rx="10" '
+                 f'class="surf line-s"/>')
+        p.append(f'<image clip-path="url(#ic{i})" x="{x + 18}" y="{card_y + 18}" '
+                 f'width="48" height="48" href="data:image/png;base64,{data}"/>')
+        p.append(f'<rect x="{x + 18}" y="{card_y + 18}" width="48" height="48" rx="11" '
+                 f'fill="none" class="line-s"/>')
+        p.append(txt(x + 78, card_y + 42, title, cls="lead fg"))
+        p.append(txt(x + 78, card_y + 62, sub, cls="small fnt"))
+        for j, line in enumerate(lines):
+            p.append(txt(x + 18, card_y + 92 + j * 17, line, cls="small mut"))
+        dot = LANG_COLOR.get(lang, "#8b949e")
+        p.append(f'<circle cx="{x + 22}" cy="{card_y + 130}" r="4.4" fill="{dot}"/>')
+        p.append(txt(x + 33, card_y + 134, stack, cls="small fnt"))
+        p.append(txt(x + card_w - 18, card_y + 134, commits, cls="small fnt", anchor="end"))
+        p += platform_row(x + card_w - 66, card_y + 26)
+        p.append('</g>')
+    p.append("</svg>")
+    return "flagship", p
+
+
 # ------------------------------------------------------------ showcase
 
 GROUPS = [
@@ -118,26 +187,28 @@ GROUPS = [
         ("LiquidGlassKit", "Swift", "Private", True,
          ["SwiftUI component library — glass", "materials, motion, SOS module."]),
     ]),
-    ("CLIENT PLATFORMS", [
-        ("kozmonet", "Laravel", "kozmonet.com.tr", True,
-         ["End-to-end e-commerce platform,", "designed and built solo."]),
-        ("valego", "PHP", "valego.com.tr", True,
-         ["Backend and infrastructure for a", "production storefront."]),
+    ("AGENCY WORK  ·  ATOMEDYA", [
+        ("valego social", "PHP · Flutter", "Private", True,
+         ["Social layer for Valego — feed,", "campaigns. 191 commits."]),
+        ("internal consoles", "TypeScript · Blade", "Private", True,
+         ["Operations and quoting panels used", "across the agency. 599 commits."]),
+        ("kozmonet", "Blade", "kozmonet.com.tr", True,
+         ["End-to-end e-commerce platform.", "96 commits."]),
         ("iremkalkanpromakeup", "PHP", "iremkalkanpromakeup.com", True,
-         ["Booking and portfolio site, designed", "and built end-to-end."]),
-        ("businessturkey", "PHP", "businessturkiye.co", True,
-         ["Corporate platform, designed and", "built end-to-end."]),
-        ("riverra-eticaret", "Laravel", "Private", True,
-         ["Drop-in e-commerce package managed", "from a central Riverra panel."]),
-        (None, None, None, None,
-         ["Client and product code stays closed.", "The work itself stays visible."]),
+         ["Booking and portfolio site, built", "end-to-end. 93 commits."]),
+        ("riverra", "Laravel", "Private", True,
+         ["Drop-in e-commerce package driven", "from a central panel. 40 commits."]),
+        (None, None, None, None, []),
     ]),
 ]
 
+# Ranked by commits authored in the past year. Only projects whose product is
+# already public are named; the rest of the agency work stays as a count.
 PRIVATE_WORK = [
-    ("TechPulse", "Swift 6"), ("Campers", "Swift"), ("LiquidGlassKit", "SwiftUI"),
-    ("kozmonet", "Laravel"), ("valego", "PHP"), ("iremkalkanpromakeup", "PHP"),
-    ("businessturkey", "PHP"), ("riverra-eticaret", "Laravel"),
+    ("valego", "854 commits"), ("businessturkey", "811 commits"),
+    ("internal consoles", "599 commits"), ("valego social", "191 commits"),
+    ("kozmonet", "96 commits"), ("iremkalkanpromakeup", "93 commits"),
+    ("riverra", "40 commits"), ("TechPulse", "27 commits"),
 ]
 
 # The one deliberate loop on the page: the private projects have no repository to
@@ -184,9 +255,8 @@ def repo_card(x, y, name, lang, meta, private, lines, d):
     if name is None:                                    # private-work ticker
         o.append(f'<rect x="{x}" y="{y}" width="{CW}" height="{CH}" rx="8" fill="none" '
                  f'class="line-s march" stroke-dasharray="4 4"/>')
-        o.append(txt(x + 16, y + 30, f"{len(PRIVATE_WORK)} private projects",
-                     cls="title mut"))
-        o.append(txt(x + 16, y + 50, "Code stays closed, the work stays visible.",
+        o.append(txt(x + 16, y + 30, "27 private repositories", cls="title mut"))
+        o.append(txt(x + 16, y + 50, "3,025 commits in the past year.",
                      cls="small fnt"))
         cycle = len(PRIVATE_WORK) * 2400
         for j, (proj, stack) in enumerate(PRIVATE_WORK):
@@ -278,6 +348,64 @@ def linkedin(theme):
     return "linkedin", p
 
 
+
+# ----------------------------------------------------------- credentials
+
+STACK = [
+    ("Languages", "Swift · Python · JavaScript · PHP · Java · C++"),
+    ("Apple", "SwiftUI · Swift 6 Concurrency · Combine · CryptoKit · MapKit"),
+    ("Web & cloud", "Laravel · MySQL · AWS Lambda · DynamoDB · Supabase · REST"),
+    ("Machine learning", "Keras · scikit-learn · TF-IDF · Core ML"),
+    ("Design", "Figma · Framer"),
+]
+
+CERTS = [
+    ("Full Stack Developer", "Meta"),
+    ("AI Engineering", "IBM"),
+    ("Cloud Practitioner", "Amazon Web Services"),
+    ("UX Design", "Google"),
+    ("PCEP — Entry-Level Python", "Python Institute"),
+    ("Java Foundations", "Oracle"),
+    ("Python Coder (GPYC)", "GIAC"),
+]
+
+
+def credentials(theme):
+    row_h, label_w = 34, 150
+    stack_top = 40
+    cert_label_y = stack_top + len(STACK) * row_h + 46
+    cert_top = cert_label_y + 18
+    cert_rows = (len(CERTS) + 1) // 2
+    h = cert_top + cert_rows * 42 + 6
+
+    p = open_svg(h, "Stack and certifications", theme)
+    p += eyebrow_row(0, 22, "STACK", W)
+    for i, (label, items) in enumerate(STACK):
+        y = stack_top + i * row_h
+        d = STEP + i * STEP
+        p.append(f'<g class="e"{delay(d)}>')
+        p.append(txt(0, y + 22, label, cls="small fnt"))
+        p.append(txt(label_w, y + 22, items, cls="body mut"))
+        if i < len(STACK) - 1:
+            p.append(f'<rect x="0" y="{y + row_h - 1}" width="{W}" height="1" '
+                     f'class="line-f" opacity=".55"/>')
+        p.append('</g>')
+
+    p += eyebrow_row(0, cert_label_y, "CERTIFICATIONS", W, d=6 * STEP)
+    for i, (name, issuer) in enumerate(CERTS):
+        col, row = i % 2, i // 2
+        x = col * 452
+        y = cert_top + row * 42
+        p.append(f'<g class="e"{delay(7 * STEP + i * 30)}>')
+        p.append(f'<path d="M{x + 1} {y + 12}v14" class="line-s" stroke-width="2" '
+                 f'stroke-linecap="round"/>')
+        p.append(txt(x + 14, y + 18, name, cls="body fg"))
+        p.append(txt(x + 14, y + 34, issuer, cls="small fnt"))
+        p.append('</g>')
+    p.append("</svg>")
+    return "credentials", p
+
+
 # --------------------------------------------------------------- stats
 
 QUERY = """
@@ -332,14 +460,30 @@ def stats(user, theme):
     def plural(n, one, many):
         return one if n == 1 else many
 
-    metrics = [(repos, plural(repos, "Public repository", "Public repositories")),
-               (stars, plural(stars, "Total star", "Total stars")),
-               (contribs, "Contributions, past year"),
-               (followers, plural(followers, "Follower", "Followers"))]
+    cache_path = ASSETS / "commit-days.json"
+    cache = json.loads(cache_path.read_text()) if cache_path.exists() else {}
+
+    if cache:
+        # Commit history reaches private and organisation repositories; the
+        # public GraphQL slice does not, and understates the work badly.
+        metrics = [(cache["repos"], "Repositories worked in"),
+                   (cache["private"], "Private repositories"),
+                   (repos, plural(repos, "Public repository", "Public repositories")),
+                   (stars, plural(stars, "Total star", "Total stars"))]
+        if cache.get("languages"):
+            sizes = cache["languages"]
+            colors = {n: LANG_COLOR.get(n, "#8b949e") for n in sizes}
+            top = sorted(sizes.items(), key=lambda kv: -kv[1])[:5]
+            total = sum(s for _, s in top) or 1
+    else:
+        metrics = [(repos, plural(repos, "Public repository", "Public repositories")),
+                   (stars, plural(stars, "Total star", "Total stars")),
+                   (contribs, "Contributions, past year"),
+                   (followers, plural(followers, "Follower", "Followers"))]
 
     h = 168
     p = open_svg(h, "GitHub activity", theme)
-    p += eyebrow_row(0, 22, "GITHUB", W)
+    p += eyebrow_row(0, 22, "LANGUAGE MIX  ·  ALL REPOSITORIES", W)
     for i, (value, label) in enumerate(metrics):
         x = i * 226
         p.append(f'<g class="e"{delay(STEP + i * STEP)}>')
@@ -385,7 +529,7 @@ if __name__ == "__main__":
     print("rendering cards:")
     user = fetch_stats() if TOKEN else None
     for theme in ("dark", "light"):
-        for builder in (hero, capabilities, showcase, linkedin):
+        for builder in (hero, capabilities, flagship, showcase, linkedin, credentials):
             name, parts = builder(theme)
             write(f"{name}-{theme}", parts)
         if user:

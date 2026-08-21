@@ -122,50 +122,52 @@
 <text x="864" y="276" class="small fnt" text-anchor="end">Private</text>
 </g>
 <g class="e" style="animation-delay:360ms">
-<text x="0" y="342" class="eyebrow fnt">CLIENT PLATFORMS</text>
-<rect x="124" y="338" width="756" height="1" class="line-f"/>
+<text x="0" y="342" class="eyebrow fnt">AGENCY WORK  ·  ATOMEDYA</text>
+<rect x="179" y="338" width="701" height="1" class="line-f"/>
 </g>
 <g class="e" style="animation-delay:405ms">
 <rect x="0" y="354" width="281" height="96" rx="8" class="surf line-s"/>
-<text x="16" y="382" class="title mut">kozmonet</text>
-<text x="16" y="404" class="small mut">End-to-end e-commerce platform,</text>
-<text x="16" y="421" class="small mut">designed and built solo.</text>
-<circle cx="20" cy="432" r="4.4" fill="#FF2D20"/>
-<text x="31" y="436" class="small fnt">Laravel</text>
-<text x="265" y="436" class="small fnt" text-anchor="end">kozmonet.com.tr</text>
+<text x="16" y="382" class="title mut">valego social</text>
+<text x="16" y="404" class="small mut">Social layer for Valego — feed,</text>
+<text x="16" y="421" class="small mut">campaigns. 191 commits.</text>
+<circle cx="20" cy="432" r="4.4" fill="#4F5D95"/>
+<text x="31" y="436" class="small fnt">PHP · Flutter</text>
+<g transform="translate(213,428)"><rect x="0" y="3.6" width="7.6" height="5.6" rx="1.4" fill="var(--faint)"/><path d="M1.7 3.6V2.6a2.1 2.1 0 0 1 4.2 0v1" fill="none" stroke="var(--faint)" stroke-width="1.1"/></g>
+<text x="265" y="436" class="small fnt" text-anchor="end">Private</text>
 </g>
 <g class="e" style="animation-delay:450ms">
 <rect x="300" y="354" width="281" height="96" rx="8" class="surf line-s"/>
-<text x="316" y="382" class="title mut">valego</text>
-<text x="316" y="404" class="small mut">Backend and infrastructure for a</text>
-<text x="316" y="421" class="small mut">production storefront.</text>
-<circle cx="320" cy="432" r="4.4" fill="#4F5D95"/>
-<text x="331" y="436" class="small fnt">PHP</text>
-<text x="565" y="436" class="small fnt" text-anchor="end">valego.com.tr</text>
+<text x="316" y="382" class="title mut">internal consoles</text>
+<text x="316" y="404" class="small mut">Operations and quoting panels used</text>
+<text x="316" y="421" class="small mut">across the agency. 599 commits.</text>
+<circle cx="320" cy="432" r="4.4" fill="#3178c6"/>
+<text x="331" y="436" class="small fnt">TypeScript · Blade</text>
+<g transform="translate(513,428)"><rect x="0" y="3.6" width="7.6" height="5.6" rx="1.4" fill="var(--faint)"/><path d="M1.7 3.6V2.6a2.1 2.1 0 0 1 4.2 0v1" fill="none" stroke="var(--faint)" stroke-width="1.1"/></g>
+<text x="565" y="436" class="small fnt" text-anchor="end">Private</text>
 </g>
 <g class="e" style="animation-delay:495ms">
 <rect x="599" y="354" width="281" height="96" rx="8" class="surf line-s"/>
-<text x="615" y="382" class="title mut">iremkalkanpromakeup</text>
-<text x="615" y="404" class="small mut">Booking and portfolio site, designed</text>
-<text x="615" y="421" class="small mut">and built end-to-end.</text>
-<circle cx="619" cy="432" r="4.4" fill="#4F5D95"/>
-<text x="630" y="436" class="small fnt">PHP</text>
-<text x="864" y="436" class="small fnt" text-anchor="end">iremkalkanpromakeup.com</text>
+<text x="615" y="382" class="title mut">kozmonet</text>
+<text x="615" y="404" class="small mut">End-to-end e-commerce platform.</text>
+<text x="615" y="421" class="small mut">96 commits.</text>
+<circle cx="619" cy="432" r="4.4" fill="#f7523f"/>
+<text x="630" y="436" class="small fnt">Blade</text>
+<text x="864" y="436" class="small fnt" text-anchor="end">kozmonet.com.tr</text>
 </g>
 <g class="e" style="animation-delay:540ms">
 <rect x="0" y="468" width="281" height="96" rx="8" class="surf line-s"/>
-<text x="16" y="496" class="title mut">businessturkey</text>
-<text x="16" y="518" class="small mut">Corporate platform, designed and</text>
-<text x="16" y="535" class="small mut">built end-to-end.</text>
+<text x="16" y="496" class="title mut">iremkalkanpromakeup</text>
+<text x="16" y="518" class="small mut">Booking and portfolio site, built</text>
+<text x="16" y="535" class="small mut">end-to-end. 93 commits.</text>
 <circle cx="20" cy="546" r="4.4" fill="#4F5D95"/>
 <text x="31" y="550" class="small fnt">PHP</text>
-<text x="265" y="550" class="small fnt" text-anchor="end">businessturkiye.co</text>
+<text x="265" y="550" class="small fnt" text-anchor="end">iremkalkanpromakeup.com</text>
 </g>
 <g class="e" style="animation-delay:585ms">
 <rect x="300" y="468" width="281" height="96" rx="8" class="surf line-s"/>
-<text x="316" y="496" class="title mut">riverra-eticaret</text>
-<text x="316" y="518" class="small mut">Drop-in e-commerce package managed</text>
-<text x="316" y="535" class="small mut">from a central Riverra panel.</text>
+<text x="316" y="496" class="title mut">riverra</text>
+<text x="316" y="518" class="small mut">Drop-in e-commerce package driven</text>
+<text x="316" y="535" class="small mut">from a central panel. 40 commits.</text>
 <circle cx="320" cy="546" r="4.4" fill="#FF2D20"/>
 <text x="331" y="550" class="small fnt">Laravel</text>
 <g transform="translate(513,542)"><rect x="0" y="3.6" width="7.6" height="5.6" rx="1.4" fill="var(--faint)"/><path d="M1.7 3.6V2.6a2.1 2.1 0 0 1 4.2 0v1" fill="none" stroke="var(--faint)" stroke-width="1.1"/></g>
@@ -173,47 +175,47 @@
 </g>
 <g class="e" style="animation-delay:630ms">
 <rect x="599" y="468" width="281" height="96" rx="8" fill="none" class="line-s march" stroke-dasharray="4 4"/>
-<text x="615" y="498" class="title mut">8 private projects</text>
-<text x="615" y="518" class="small fnt">Code stays closed, the work stays visible.</text>
+<text x="615" y="498" class="title mut">27 private repositories</text>
+<text x="615" y="518" class="small fnt">3,025 commits in the past year.</text>
 <g class="tick" style="animation-delay:0ms">
 <g transform="translate(615,538)"><rect x="0" y="3.6" width="7.6" height="5.6" rx="1.4" fill="var(--faint)"/><path d="M1.7 3.6V2.6a2.1 2.1 0 0 1 4.2 0v1" fill="none" stroke="var(--faint)" stroke-width="1.1"/></g>
-<text x="629" y="546" class="small mut">TechPulse</text>
-<text x="864" y="546" class="small fnt" text-anchor="end">Swift 6</text>
+<text x="629" y="546" class="small mut">valego</text>
+<text x="864" y="546" class="small fnt" text-anchor="end">854 commits</text>
 </g>
 <g class="tick" style="animation-delay:2400ms">
 <g transform="translate(615,538)"><rect x="0" y="3.6" width="7.6" height="5.6" rx="1.4" fill="var(--faint)"/><path d="M1.7 3.6V2.6a2.1 2.1 0 0 1 4.2 0v1" fill="none" stroke="var(--faint)" stroke-width="1.1"/></g>
-<text x="629" y="546" class="small mut">Campers</text>
-<text x="864" y="546" class="small fnt" text-anchor="end">Swift</text>
+<text x="629" y="546" class="small mut">businessturkey</text>
+<text x="864" y="546" class="small fnt" text-anchor="end">811 commits</text>
 </g>
 <g class="tick" style="animation-delay:4800ms">
 <g transform="translate(615,538)"><rect x="0" y="3.6" width="7.6" height="5.6" rx="1.4" fill="var(--faint)"/><path d="M1.7 3.6V2.6a2.1 2.1 0 0 1 4.2 0v1" fill="none" stroke="var(--faint)" stroke-width="1.1"/></g>
-<text x="629" y="546" class="small mut">LiquidGlassKit</text>
-<text x="864" y="546" class="small fnt" text-anchor="end">SwiftUI</text>
+<text x="629" y="546" class="small mut">internal consoles</text>
+<text x="864" y="546" class="small fnt" text-anchor="end">599 commits</text>
 </g>
 <g class="tick" style="animation-delay:7200ms">
 <g transform="translate(615,538)"><rect x="0" y="3.6" width="7.6" height="5.6" rx="1.4" fill="var(--faint)"/><path d="M1.7 3.6V2.6a2.1 2.1 0 0 1 4.2 0v1" fill="none" stroke="var(--faint)" stroke-width="1.1"/></g>
-<text x="629" y="546" class="small mut">kozmonet</text>
-<text x="864" y="546" class="small fnt" text-anchor="end">Laravel</text>
+<text x="629" y="546" class="small mut">valego social</text>
+<text x="864" y="546" class="small fnt" text-anchor="end">191 commits</text>
 </g>
 <g class="tick" style="animation-delay:9600ms">
 <g transform="translate(615,538)"><rect x="0" y="3.6" width="7.6" height="5.6" rx="1.4" fill="var(--faint)"/><path d="M1.7 3.6V2.6a2.1 2.1 0 0 1 4.2 0v1" fill="none" stroke="var(--faint)" stroke-width="1.1"/></g>
-<text x="629" y="546" class="small mut">valego</text>
-<text x="864" y="546" class="small fnt" text-anchor="end">PHP</text>
+<text x="629" y="546" class="small mut">kozmonet</text>
+<text x="864" y="546" class="small fnt" text-anchor="end">96 commits</text>
 </g>
 <g class="tick" style="animation-delay:12000ms">
 <g transform="translate(615,538)"><rect x="0" y="3.6" width="7.6" height="5.6" rx="1.4" fill="var(--faint)"/><path d="M1.7 3.6V2.6a2.1 2.1 0 0 1 4.2 0v1" fill="none" stroke="var(--faint)" stroke-width="1.1"/></g>
 <text x="629" y="546" class="small mut">iremkalkanpromakeup</text>
-<text x="864" y="546" class="small fnt" text-anchor="end">PHP</text>
+<text x="864" y="546" class="small fnt" text-anchor="end">93 commits</text>
 </g>
 <g class="tick" style="animation-delay:14400ms">
 <g transform="translate(615,538)"><rect x="0" y="3.6" width="7.6" height="5.6" rx="1.4" fill="var(--faint)"/><path d="M1.7 3.6V2.6a2.1 2.1 0 0 1 4.2 0v1" fill="none" stroke="var(--faint)" stroke-width="1.1"/></g>
-<text x="629" y="546" class="small mut">businessturkey</text>
-<text x="864" y="546" class="small fnt" text-anchor="end">PHP</text>
+<text x="629" y="546" class="small mut">riverra</text>
+<text x="864" y="546" class="small fnt" text-anchor="end">40 commits</text>
 </g>
 <g class="tick" style="animation-delay:16800ms">
 <g transform="translate(615,538)"><rect x="0" y="3.6" width="7.6" height="5.6" rx="1.4" fill="var(--faint)"/><path d="M1.7 3.6V2.6a2.1 2.1 0 0 1 4.2 0v1" fill="none" stroke="var(--faint)" stroke-width="1.1"/></g>
-<text x="629" y="546" class="small mut">riverra-eticaret</text>
-<text x="864" y="546" class="small fnt" text-anchor="end">Laravel</text>
+<text x="629" y="546" class="small mut">TechPulse</text>
+<text x="864" y="546" class="small fnt" text-anchor="end">27 commits</text>
 </g>
 </g>
 </svg>

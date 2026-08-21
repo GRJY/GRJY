@@ -25,7 +25,7 @@
 
 <p align="center">
   <a href="https://github.com/GRJY?tab=repositories">
-    <img src="./assets/repos.svg" width="880" alt="Repository showcase — public projects and private client platforms"/>
+    <img src="./assets/showcase.svg" width="880" alt="Repository showcase — public projects and private client platforms"/>
   </a>
 </p>
 

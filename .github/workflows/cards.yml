@@ -1,4 +1,4 @@
-name: Refresh stats card
+name: Refresh profile cards
 
 on:
   schedule:
@@ -15,19 +15,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Regenerate assets/stats.svg
+      - name: Regenerate the stats card
         env:
           GH_TOKEN: ${{ secrets.STATS_TOKEN || secrets.GITHUB_TOKEN }}
           PROFILE_LOGIN: ${{ github.repository_owner }}
-        run: python3 scripts/gen_stats.py
+        run: python3 scripts/gen_assets.py
 
       - name: Commit if changed
         run: |
-          if [[ -n "$(git status --porcelain assets/stats.svg)" ]]; then
+          if [[ -n "$(git status --porcelain assets)" ]]; then
             git config user.name  "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add assets/stats.svg
-            git commit -m "chore: refresh stats card"
+            git add assets
+            git commit -m "chore: refresh profile cards"
             git push
           else
             echo "no change"

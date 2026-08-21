@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="172" viewBox="0 0 880 172" role="img" aria-label="What I build">
+<style>
+  :root {
+    --canvas:  #ffffff;
+    --surface: #f6f8fa;
+    --line:    #d1d9e0;
+    --fg:      #1f2328;
+    --muted:   #59636e;
+    --faint:   #818b98;
+    --accent:  #0969da;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --canvas:  #0d1117;
+      --surface: #151b23;
+      --line:    #3d444d;
+      --fg:      #f0f6fc;
+      --muted:   #9198a1;
+      --faint:   #656c76;
+      --accent:  #4493f8;
+    }
+  }
+  text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif; }
+  .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+  .fg { fill: var(--fg); }
+  .mut { fill: var(--muted); }
+  .fnt { fill: var(--faint); }
+  .acc { fill: var(--accent); }
+  .surf { fill: var(--surface); }
+  .canvas { fill: var(--canvas); }
+  .line-f { fill: var(--line); }
+  .line-s { stroke: var(--line); }
+  .display { font-size: 42px; font-weight: 600; letter-spacing: -1.25px; }
+  .lead { font-size: 16.5px; font-weight: 500; letter-spacing: -0.2px; }
+  .body { font-size: 13px; }
+  .small { font-size: 11.5px; }
+  .title { font-size: 13.5px; font-weight: 600; letter-spacing: -0.1px; }
+  .metric { font-size: 30px; font-weight: 600; letter-spacing: -0.8px;
+            font-variant-numeric: tabular-nums; }
+  .eyebrow { font-size: 10px; font-weight: 600; letter-spacing: 1.6px; }
+  .e { animation: e 260ms cubic-bezier(0.23, 1, 0.32, 1) both; transform-box: fill-box; }
+  @keyframes e {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .grow { animation: grow 520ms cubic-bezier(0.23, 1, 0.32, 1) both; transform-box: fill-box;
+          transform-origin: left center; }
+  @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @media (prefers-reduced-motion: reduce) {
+    .e, .grow { animation: none; }
+  }
+</style>
+<rect width="880" height="172" class="canvas"/>
+<g class="e">
+<text x="0" y="22" class="eyebrow fnt">WHAT I BUILD</text>
+<rect x="96" y="18" width="784" height="1" class="line-f"/>
+</g>
+<g class="e" style="animation-delay:45ms">
+<g transform="translate(0,46)"><g fill="none" stroke="var(--muted)" stroke-width="1.4" stroke-linecap="round"><path d="M3 4.5h4M3 10h4M3 15.5h4M7 4.5 13 10M7 10h6M7 15.5 13 10M13 10h4"/></g><g fill="var(--muted)"><circle cx="2" cy="4.5" r="1.8"/><circle cx="2" cy="10" r="1.8"/><circle cx="2" cy="15.5" r="1.8"/><circle cx="18" cy="10" r="2.2"/></g></g>
+<text x="0" y="94" class="title fg">On-device ML</text>
+<text x="0" y="116" class="small mut">TF-IDF and logistic regression</text>
+<text x="0" y="133" class="small mut">at ~95% accuracy, plus applied</text>
+<text x="0" y="150" class="small mut">Keras neural networks.</text>
+</g>
+<rect x="214" y="44" width="1" height="106" class="line-f e" opacity=".7" style="animation-delay:90ms"/>
+<g class="e" style="animation-delay:90ms">
+<g transform="translate(226,46)"><g fill="none" stroke="var(--muted)" stroke-width="1.4"><path d="M5.6 8.4V5.8a4.4 4.4 0 0 1 8.8 0v2.6" stroke-linecap="round"/><rect x="2.6" y="8.4" width="14.8" height="9.6" rx="2.4"/></g><circle cx="10" cy="13.2" r="1.7" fill="var(--muted)"/></g>
+<text x="226" y="94" class="title fg">End-to-end encryption</text>
+<text x="226" y="116" class="small mut">Curve25519 key exchange with</text>
+<text x="226" y="133" class="small mut">AES-GCM 256-bit payloads,</text>
+<text x="226" y="150" class="small mut">under 50 ms round trip.</text>
+</g>
+<rect x="440" y="44" width="1" height="106" class="line-f e" opacity=".7" style="animation-delay:135ms"/>
+<g class="e" style="animation-delay:135ms">
+<g transform="translate(452,46)"><g fill="none" stroke="var(--muted)" stroke-width="1.4"><rect x="4.4" y="1.6" width="11.2" height="16.8" rx="2.6"/><path d="M8.4 4.4h3.2" stroke-linecap="round"/></g><circle cx="10" cy="15.4" r="1.2" fill="var(--muted)"/></g>
+<text x="452" y="94" class="title fg">Native Apple apps</text>
+<text x="452" y="116" class="small mut">Swift 6 concurrency with actors,</text>
+<text x="452" y="133" class="small mut">SwiftUI, Combine, MapKit</text>
+<text x="452" y="150" class="small mut">and CryptoKit.</text>
+</g>
+<rect x="666" y="44" width="1" height="106" class="line-f e" opacity=".7" style="animation-delay:180ms"/>
+<g class="e" style="animation-delay:180ms">
+<g transform="translate(678,46)"><g fill="none" stroke="var(--muted)" stroke-width="1.4" stroke-linejoin="round"><path d="M10 2 18.5 6.4 10 10.8 1.5 6.4z"/><path d="M1.5 10.4 10 14.8l8.5-4.4"/><path d="M1.5 14.2 10 18.6l8.5-4.4"/></g></g>
+<text x="678" y="94" class="title fg">Full-stack web</text>
+<text x="678" y="116" class="small mut">Laravel and PHP, MySQL,</text>
+<text x="678" y="133" class="small mut">JavaScript, AWS Lambda</text>
+<text x="678" y="150" class="small mut">and DynamoDB, REST APIs.</text>
+</g>
+</svg>

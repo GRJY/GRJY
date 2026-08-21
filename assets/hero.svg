@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="172" viewBox="0 0 880 172" role="img" aria-label="Giray Akbulut — Full Stack and iOS Developer">
+<style>
+  :root {
+    --canvas:  #ffffff;
+    --surface: #f6f8fa;
+    --line:    #d1d9e0;
+    --fg:      #1f2328;
+    --muted:   #59636e;
+    --faint:   #818b98;
+    --accent:  #0969da;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --canvas:  #0d1117;
+      --surface: #151b23;
+      --line:    #3d444d;
+      --fg:      #f0f6fc;
+      --muted:   #9198a1;
+      --faint:   #656c76;
+      --accent:  #4493f8;
+    }
+  }
+  text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif; }
+  .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+  .fg { fill: var(--fg); }
+  .mut { fill: var(--muted); }
+  .fnt { fill: var(--faint); }
+  .acc { fill: var(--accent); }
+  .surf { fill: var(--surface); }
+  .canvas { fill: var(--canvas); }
+  .line-f { fill: var(--line); }
+  .line-s { stroke: var(--line); }
+  .display { font-size: 42px; font-weight: 600; letter-spacing: -1.25px; }
+  .lead { font-size: 16.5px; font-weight: 500; letter-spacing: -0.2px; }
+  .body { font-size: 13px; }
+  .small { font-size: 11.5px; }
+  .title { font-size: 13.5px; font-weight: 600; letter-spacing: -0.1px; }
+  .metric { font-size: 30px; font-weight: 600; letter-spacing: -0.8px;
+            font-variant-numeric: tabular-nums; }
+  .eyebrow { font-size: 10px; font-weight: 600; letter-spacing: 1.6px; }
+  .e { animation: e 260ms cubic-bezier(0.23, 1, 0.32, 1) both; transform-box: fill-box; }
+  @keyframes e {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .grow { animation: grow 520ms cubic-bezier(0.23, 1, 0.32, 1) both; transform-box: fill-box;
+          transform-origin: left center; }
+  @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @media (prefers-reduced-motion: reduce) {
+    .e, .grow { animation: none; }
+  }
+</style>
+<rect width="880" height="172" class="canvas"/>
+<text x="0" y="24" class="eyebrow fnt e">İSTANBUL, TÜRKİYE</text>
+<text x="0" y="74" class="display fg e" style="animation-delay:45ms">Giray Akbulut</text>
+<text x="0" y="104" class="lead mut e" style="animation-delay:90ms">Full Stack &amp; iOS Developer  ·  Computer Engineer</text>
+<text x="0" y="132" class="body fnt e" style="animation-delay:135ms">Performance-critical, security-first products — on-device machine learning,</text>
+<text x="0" y="150" class="body fnt e" style="animation-delay:135ms">end-to-end encrypted systems, and native apps for Apple platforms.</text>
+<rect x="0" y="166" width="880" height="1" class="line-f e" opacity="1" style="animation-delay:180ms"/>
+</svg>

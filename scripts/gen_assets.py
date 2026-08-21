@@ -387,7 +387,7 @@ def showcase(theme):
             p += repo_card(COLX[col], top + row * (CH + GAP), *item, d=d)
             d += STEP
     p.append("</svg>")
-    return "showcase", p
+    return "work", p
 
 
 # ------------------------------------------------------------ linkedin

@@ -14,7 +14,7 @@
 
 <img src="./assets/apps-dark.svg#gh-dark-mode-only" width="880" alt="Shipped apps — Valego Kurumsal and Business Turkey"/><img src="./assets/apps-light.svg#gh-light-mode-only" width="880" alt="Shipped apps — Valego Kurumsal and Business Turkey"/>
 
-<img src="./assets/showcase-dark.svg?v=2#gh-dark-mode-only" width="880" alt="Selected work — open source, products and agency platforms"/><img src="./assets/showcase-light.svg?v=2#gh-light-mode-only" width="880" alt="Selected work — open source, products and agency platforms"/>
+<img src="./assets/work-dark.svg#gh-dark-mode-only" width="880" alt="Selected work — open source, products and agency platforms"/><img src="./assets/work-light.svg#gh-light-mode-only" width="880" alt="Selected work — open source, products and agency platforms"/>
 
 <a href="https://www.linkedin.com/in/giray-akbulut-33a695219/#gh-dark-mode-only"><img src="./assets/linkedin-dark.svg" width="880" alt="LinkedIn — Giray Akbulut"/></a>
 <a href="https://www.linkedin.com/in/giray-akbulut-33a695219/#gh-light-mode-only"><img src="./assets/linkedin-light.svg" width="880" alt="LinkedIn — Giray Akbulut"/></a>

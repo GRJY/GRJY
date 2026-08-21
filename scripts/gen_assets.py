@@ -173,12 +173,23 @@ def flagship(theme):
 
 
 
+
+LI_MARK = ("M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 "
+           "2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 "
+           "4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 "
+           "2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 "
+           "23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z")
 # ---------------------------------------------------------------- chips
 
 GLOBE = ('<circle cx="8" cy="8" r="7.2" fill="none" stroke="var(--muted)" stroke-width="1.3"/>'
          '<ellipse cx="8" cy="8" rx="3.1" ry="7.2" fill="none" stroke="var(--muted)" stroke-width="1.3"/>'
          '<path d="M1 8h14" stroke="var(--muted)" stroke-width="1.3"/>')
 APPLE_MARK = f'<g transform="scale(.667)"><path d="{APPLE}" fill="var(--muted)"/></g>'
+MAIL_CHIP = ('<rect x="0.7" y="2.4" width="14.6" height="11" rx="2.2" fill="none" '
+             'stroke="var(--muted)" stroke-width="1.3"/>'
+             '<path d="M1.2 3.5 8 8.7l6.8-5.2" fill="none" stroke="var(--muted)" '
+             'stroke-width="1.3" stroke-linejoin="round"/>')
+LI_CHIP = f'<g transform="scale(.667)"><path d="{LI_MARK}" fill="var(--muted)"/></g>'
 PLAY_MARK = f'<g transform="scale(.667)"><path d="{PLAY}" fill="var(--muted)"/></g>'
 
 CHIPS = [
@@ -188,6 +199,8 @@ CHIPS = [
     ("chip-bt-web", "businessturkiye.co", GLOBE),
     ("chip-bt-ios", "App Store", APPLE_MARK),
     ("chip-bt-play", "Google Play", PLAY_MARK),
+    ("chip-email", "akbulutgiray@gmail.com", MAIL_CHIP),
+    ("chip-linkedin", "linkedin.com/in/giray-akbulut", LI_CHIP),
 ]
 
 
@@ -393,13 +406,6 @@ def showcase(theme):
 
 # ------------------------------------------------------------ linkedin
 
-LI_MARK = ("M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 "
-           "2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 "
-           "4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 "
-           "2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 "
-           "23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z")
-
-
 def linkedin(theme):
     h = 148
     avatar = base64.b64encode((ASSETS / "avatar.png").read_bytes()).decode()
@@ -489,6 +495,45 @@ def credentials(theme):
         p.append('</g>')
     p.append("</svg>")
     return "credentials", p
+
+
+
+# -------------------------------------------------------------- contact
+
+MAIL = ('<rect x="1" y="2.6" width="18" height="13" rx="2.6" fill="none" '
+        'stroke="var(--muted)" stroke-width="1.4"/>'
+        '<path d="M1.6 4 10 10.4 18.4 4" fill="none" stroke="var(--muted)" '
+        'stroke-width="1.4" stroke-linejoin="round"/>')
+PIN = ('<path d="M10 1.6a5.6 5.6 0 0 0-5.6 5.6c0 4.2 5.6 10.4 5.6 10.4s5.6-6.2 '
+       '5.6-10.4A5.6 5.6 0 0 0 10 1.6z" fill="none" stroke="var(--muted)" stroke-width="1.4"/>'
+       '<circle cx="10" cy="7.2" r="2.1" fill="var(--muted)"/>')
+
+CONTACT_ROWS = [
+    (MAIL, "EMAIL", "akbulutgiray@gmail.com"),
+    (f'<g transform="scale(.8)"><path d="{LI_MARK}" fill="var(--muted)"/></g>',
+     "LINKEDIN", "in/giray-akbulut"),
+    (PIN, "BASED IN", "İstanbul, Türkiye"),
+]
+
+
+def contact(theme):
+    h = 196
+    p = open_svg(h, "Contact — Giray Akbulut", theme)
+    p += eyebrow_row(0, 22, "CONTACT", W)
+    p.append(txt(0, 66, "Open to freelance and full-time work.", cls="display fg",
+                 d=STEP, extra=' font-size="28"'))
+    p.append(txt(0, 92, "Based in İstanbul, working with teams anywhere.",
+                 cls="body fnt", d=2 * STEP))
+    for i, (icon, label, value) in enumerate(CONTACT_ROWS):
+        x = i * 300
+        p.append(f'<g class="e"{delay(3 * STEP + i * STEP)}>')
+        p.append(f'<g transform="translate({x},{124})">{icon}</g>')
+        p.append(txt(x + 30, 132, label, cls="eyebrow fnt"))
+        p.append(txt(x + 30, 152, value, cls="body fg"))
+        p.append('</g>')
+    p.append(rule(0, 178, W, d=6 * STEP))
+    p.append("</svg>")
+    return "contact", p
 
 
 # --------------------------------------------------------------- stats
@@ -615,7 +660,7 @@ if __name__ == "__main__":
     user = fetch_stats() if TOKEN else None
     for theme in ("dark", "light"):
         for builder in (hero, capabilities, flagship, apps, showcase, linkedin,
-                        credentials):
+                        credentials, contact):
             name, parts = builder(theme)
             write(f"{name}-{theme}", parts)
         for chip_name, label, icon in CHIPS:

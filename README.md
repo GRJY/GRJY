@@ -24,3 +24,8 @@
 <img src="./assets/contributions-dark.svg#gh-dark-mode-only" width="880" alt="Commits in the past year, private work included"/><img src="./assets/contributions-light.svg#gh-light-mode-only" width="880" alt="Commits in the past year, private work included"/>
 
 <img src="./assets/stats-dark.svg#gh-dark-mode-only" width="880" alt="Language mix across every repository"/><img src="./assets/stats-light.svg#gh-light-mode-only" width="880" alt="Language mix across every repository"/>
+
+<img src="./assets/contact-dark.svg#gh-dark-mode-only" width="880" alt="Contact"/><img src="./assets/contact-light.svg#gh-light-mode-only" width="880" alt="Contact"/>
+
+<a href="mailto:akbulutgiray@gmail.com#gh-dark-mode-only"><img src="./assets/chip-email-dark.svg" height="34" alt=""/></a><a href="mailto:akbulutgiray@gmail.com#gh-light-mode-only"><img src="./assets/chip-email-light.svg" height="34" alt=""/></a>
+<a href="https://www.linkedin.com/in/giray-akbulut-33a695219/#gh-dark-mode-only"><img src="./assets/chip-linkedin-dark.svg" height="34" alt=""/></a><a href="https://www.linkedin.com/in/giray-akbulut-33a695219/#gh-light-mode-only"><img src="./assets/chip-linkedin-light.svg" height="34" alt=""/></a>

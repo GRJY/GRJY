@@ -1,192 +1,160 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="236" viewBox="0 0 880 236" role="img" aria-label="Featured repositories carousel">
-  <defs>
-    <linearGradient id="rbg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0c1122"/>
-      <stop offset="100%" stop-color="#080b17"/>
-    </linearGradient>
-    <linearGradient id="redge" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.26"/>
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.05"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.14"/>
-    </linearGradient>
-    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#38bdf8"/>
-      <stop offset="100%" stop-color="#a78bfa"/>
-    </linearGradient>
-    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#6366f1" stop-opacity=".55"/>
-      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
-    </radialGradient>
-    <clipPath id="rcard"><rect x="1" y="1" width="878" height="234" rx="24"/></clipPath>
-
-    <style>
-      .f { font-family: ui-sans-serif, -apple-system, "SF Pro Text", "Segoe UI", Inter, Helvetica, Arial, sans-serif; }
-      .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
-
-      .slide { opacity: 0; animation: swap 22s cubic-bezier(.32,.72,0,1) infinite; transform-box: fill-box; }
-      @keyframes swap {
-        0%    { opacity: 0; transform: translateY(18px); }
-        2.6%  { opacity: 1; transform: translateY(0); }
-        17.4% { opacity: 1; transform: translateY(0); }
-        20%   { opacity: 0; transform: translateY(-18px); }
-        100%  { opacity: 0; transform: translateY(-18px); }
-      }
-      .s1 { animation-delay: 0s }
-      .s2 { animation-delay: 4.4s }
-      .s3 { animation-delay: 8.8s }
-      .s4 { animation-delay: 13.2s }
-      .s5 { animation-delay: 17.6s }
-
-      .aura { opacity: 0; animation: aura 22s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-      @keyframes aura {
-        0%   { opacity: 0; transform: scale(.7); }
-        6%   { opacity: .9; transform: scale(1); }
-        16%  { opacity: .9; transform: scale(1.06); }
-        20%  { opacity: 0; transform: scale(.7); }
-        100% { opacity: 0; transform: scale(.7); }
-      }
-
-      .prog { animation: fill 4.4s linear infinite; transform-box: fill-box; transform-origin: left center; }
-      @keyframes fill { 0% { transform: scaleX(0) } 100% { transform: scaleX(1) } }
-
-      .dotbg { fill: #ffffff; fill-opacity: .16 }
-      .dotfg { opacity: 0; animation: dotfg 22s steps(1,end) infinite; }
-      @keyframes dotfg { 0% { opacity: 1 } 20% { opacity: 0 } 100% { opacity: 0 } }
-      .d1 { animation-delay: 0s } .d2 { animation-delay: 4.4s } .d3 { animation-delay: 8.8s }
-      .d4 { animation-delay: 13.2s } .d5 { animation-delay: 17.6s }
-
-      .sweep2 { animation: sw 22s cubic-bezier(.4,0,.2,1) infinite; }
-      @keyframes sw {
-        0%   { transform: translateX(-300px) }
-        9%   { transform: translateX(1000px) }
-        100% { transform: translateX(1000px) }
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        .slide, .aura, .prog, .dotfg, .sweep2 { animation: none }
-        .s1, .aura { opacity: 1 }
-        .s2, .s3, .s4, .s5 { display: none }
-      }
-    </style>
-  </defs>
-
-  <g clip-path="url(#rcard)">
-    <rect width="880" height="236" fill="url(#rbg)"/>
-    <g>
-      <circle class="aura s1" cx="760" cy="40" r="150" fill="url(#glow)"/>
-      <circle class="aura s2" cx="760" cy="40" r="150" fill="url(#glow)"/>
-      <circle class="aura s3" cx="760" cy="40" r="150" fill="url(#glow)"/>
-      <circle class="aura s4" cx="760" cy="40" r="150" fill="url(#glow)"/>
-      <circle class="aura s5" cx="760" cy="40" r="150" fill="url(#glow)"/>
-    </g>
-    <rect class="sweep2" x="-160" y="-40" width="130" height="330" fill="#ffffff" fill-opacity=".05" transform="skewX(-16)"/>
-  </g>
-  <rect x="1" y="1" width="878" height="234" rx="24" fill="none" stroke="url(#redge)" stroke-width="1.5"/>
-
-  <text class="f mono" x="44" y="40" fill="#5b6789" font-size="11.5" letter-spacing="2.4">FEATURED REPOSITORIES</text>
-
-  <!-- slide 1 -->
-  <g class="slide s1 f">
-    <text class="mono" x="812" y="86" fill="#ffffff" fill-opacity=".06" font-size="62" font-weight="700" text-anchor="end">01</text>
-    <text x="44" y="86" fill="#f8fafc" font-size="27" font-weight="700">PureGlass</text>
-    <g transform="translate(44,108)">
-      <circle cx="5" cy="-4" r="5" fill="#F05138"/>
-      <text x="18" y="0" fill="#a9b6d6" font-size="13">Swift</text>
-      <path d="M74 -12 l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z" fill="#f5c451"/>
-      <text x="88" y="0" fill="#a9b6d6" font-size="13">5</text>
-      <text x="112" y="0" fill="#4d5a7d" font-size="13">·</text>
-      <text x="124" y="0" fill="#a9b6d6" font-size="13">MIT</text>
-    </g>
-    <text x="44" y="142" fill="#8d9ac0" font-size="14.5">Native, real Liquid Glass Mac cleaner + system monitor for macOS 26 —</text>
-    <text x="44" y="163" fill="#8d9ac0" font-size="14.5">free, private and fully offline. No telemetry, trash-first deletion.</text>
-    <g font-size="11.5" font-weight="600">
-      <g><rect x="44"  y="180" width="82" height="25" rx="12.5" fill="#38bdf8" fill-opacity=".12" stroke="#38bdf8" stroke-opacity=".3"/><text x="85"  y="197" fill="#7dd3fc" text-anchor="middle">macos-26</text></g>
-      <g><rect x="134" y="180" width="94" height="25" rx="12.5" fill="#38bdf8" fill-opacity=".12" stroke="#38bdf8" stroke-opacity=".3"/><text x="181" y="197" fill="#7dd3fc" text-anchor="middle">liquid-glass</text></g>
-      <g><rect x="236" y="180" width="90" height="25" rx="12.5" fill="#38bdf8" fill-opacity=".12" stroke="#38bdf8" stroke-opacity=".3"/><text x="281" y="197" fill="#7dd3fc" text-anchor="middle">mac-cleaner</text></g>
-      <g><rect x="334" y="180" width="70" height="25" rx="12.5" fill="#38bdf8" fill-opacity=".12" stroke="#38bdf8" stroke-opacity=".3"/><text x="369" y="197" fill="#7dd3fc" text-anchor="middle">privacy</text></g>
-    </g>
-  </g>
-
-  <!-- slide 2 -->
-  <g class="slide s2 f">
-    <text class="mono" x="812" y="86" fill="#ffffff" fill-opacity=".06" font-size="62" font-weight="700" text-anchor="end">02</text>
-    <text x="44" y="86" fill="#f8fafc" font-size="27" font-weight="700">codemaster</text>
-    <g transform="translate(44,108)">
-      <circle cx="5" cy="-4" r="5" fill="#f1e05a"/>
-      <text x="18" y="0" fill="#a9b6d6" font-size="13">JavaScript</text>
-      <path d="M112 -12 l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z" fill="#f5c451"/>
-      <text x="126" y="0" fill="#a9b6d6" font-size="13">2</text>
-    </g>
-    <text x="44" y="142" fill="#8d9ac0" font-size="14.5">Code review &amp; improvement-suggestion system — static analysis with</text>
-    <text x="44" y="163" fill="#8d9ac0" font-size="14.5">actionable refactor hints for everyday codebases.</text>
-    <g font-size="11.5" font-weight="600">
-      <g><rect x="44"  y="180" width="94" height="25" rx="12.5" fill="#a78bfa" fill-opacity=".12" stroke="#a78bfa" stroke-opacity=".3"/><text x="91"  y="197" fill="#c4b5fd" text-anchor="middle">code-review</text></g>
-      <g><rect x="146" y="180" width="106" height="25" rx="12.5" fill="#a78bfa" fill-opacity=".12" stroke="#a78bfa" stroke-opacity=".3"/><text x="199" y="197" fill="#c4b5fd" text-anchor="middle">static-analysis</text></g>
-      <g><rect x="260" y="180" width="90" height="25" rx="12.5" fill="#a78bfa" fill-opacity=".12" stroke="#a78bfa" stroke-opacity=".3"/><text x="305" y="197" fill="#c4b5fd" text-anchor="middle">javascript</text></g>
-    </g>
-  </g>
-
-  <!-- slide 3 -->
-  <g class="slide s3 f">
-    <text class="mono" x="812" y="86" fill="#ffffff" fill-opacity=".06" font-size="62" font-weight="700" text-anchor="end">03</text>
-    <text x="44" y="86" fill="#f8fafc" font-size="27" font-weight="700">Prediction-Of-Customer-Purchases-ANN</text>
-    <g transform="translate(44,108)">
-      <circle cx="5" cy="-4" r="5" fill="#3572A5"/>
-      <text x="18" y="0" fill="#a9b6d6" font-size="13">Python</text>
-      <text x="76" y="0" fill="#4d5a7d" font-size="13">·</text>
-      <text x="88" y="0" fill="#a9b6d6" font-size="13">Keras</text>
-    </g>
-    <text x="44" y="142" fill="#8d9ac0" font-size="14.5">Two-layer neural network predicting purchase intent on a 550K-row</text>
-    <text x="44" y="163" fill="#8d9ac0" font-size="14.5">dataset — 80.5% accuracy, 0.81 AUC-ROC.</text>
-    <g font-size="11.5" font-weight="600">
-      <g><rect x="44"  y="180" width="106" height="25" rx="12.5" fill="#34d399" fill-opacity=".12" stroke="#34d399" stroke-opacity=".3"/><text x="97"  y="197" fill="#6ee7b7" text-anchor="middle">deep-learning</text></g>
-      <g><rect x="158" y="180" width="62" height="25" rx="12.5" fill="#34d399" fill-opacity=".12" stroke="#34d399" stroke-opacity=".3"/><text x="189" y="197" fill="#6ee7b7" text-anchor="middle">keras</text></g>
-      <g><rect x="228" y="180" width="98" height="25" rx="12.5" fill="#34d399" fill-opacity=".12" stroke="#34d399" stroke-opacity=".3"/><text x="277" y="197" fill="#6ee7b7" text-anchor="middle">data-science</text></g>
-    </g>
-  </g>
-
-  <!-- slide 4 -->
-  <g class="slide s4 f">
-    <text class="mono" x="812" y="86" fill="#ffffff" fill-opacity=".06" font-size="62" font-weight="700" text-anchor="end">04</text>
-    <text x="44" y="86" fill="#f8fafc" font-size="27" font-weight="700">BookFy</text>
-    <g transform="translate(44,108)">
-      <circle cx="5" cy="-4" r="5" fill="#4F5D95"/>
-      <text x="18" y="0" fill="#a9b6d6" font-size="13">PHP · MySQL · jQuery</text>
-    </g>
-    <text x="44" y="142" fill="#8d9ac0" font-size="14.5">Virtual library management platform (graduation project) — catalog,</text>
-    <text x="44" y="163" fill="#8d9ac0" font-size="14.5">lending flow and AJAX search backed by the OpenLibrary API.</text>
-    <g font-size="11.5" font-weight="600">
-      <g><rect x="44"  y="180" width="74" height="25" rx="12.5" fill="#fb923c" fill-opacity=".12" stroke="#fb923c" stroke-opacity=".3"/><text x="81"  y="197" fill="#fdba74" text-anchor="middle">library</text></g>
-      <g><rect x="126" y="180" width="86" height="25" rx="12.5" fill="#fb923c" fill-opacity=".12" stroke="#fb923c" stroke-opacity=".3"/><text x="169" y="197" fill="#fdba74" text-anchor="middle">full-stack</text></g>
-      <g><rect x="220" y="180" width="96" height="25" rx="12.5" fill="#fb923c" fill-opacity=".12" stroke="#fb923c" stroke-opacity=".3"/><text x="268" y="197" fill="#fdba74" text-anchor="middle">openlibrary</text></g>
-    </g>
-  </g>
-
-  <!-- slide 5 -->
-  <g class="slide s5 f">
-    <text class="mono" x="812" y="86" fill="#ffffff" fill-opacity=".06" font-size="62" font-weight="700" text-anchor="end">05</text>
-    <text x="44" y="86" fill="#f8fafc" font-size="27" font-weight="700">homebrew-tap</text>
-    <g transform="translate(44,108)">
-      <circle cx="5" cy="-4" r="5" fill="#701516"/>
-      <text x="18" y="0" fill="#a9b6d6" font-size="13">Ruby</text>
-    </g>
-    <text x="44" y="142" fill="#8d9ac0" font-size="14.5">Official Homebrew tap for my macOS apps.</text>
-    <text class="mono" x="44" y="167" fill="#7dd3fc" font-size="13.5">brew install --cask GRJY/tap/pureglass</text>
-    <g font-size="11.5" font-weight="600">
-      <g><rect x="44"  y="182" width="80" height="25" rx="12.5" fill="#38bdf8" fill-opacity=".12" stroke="#38bdf8" stroke-opacity=".3"/><text x="84"  y="199" fill="#7dd3fc" text-anchor="middle">homebrew</text></g>
-      <g><rect x="132" y="182" width="70" height="25" rx="12.5" fill="#38bdf8" fill-opacity=".12" stroke="#38bdf8" stroke-opacity=".3"/><text x="167" y="199" fill="#7dd3fc" text-anchor="middle">macos</text></g>
-      <g><rect x="210" y="182" width="60" height="25" rx="12.5" fill="#38bdf8" fill-opacity=".12" stroke="#38bdf8" stroke-opacity=".3"/><text x="240" y="199" fill="#7dd3fc" text-anchor="middle">cask</text></g>
-    </g>
-  </g>
-
-  <!-- progress + dots -->
-  <rect x="44" y="220" width="792" height="2.5" rx="1.25" fill="#ffffff" fill-opacity=".08"/>
-  <rect class="prog" x="44" y="220" width="792" height="2.5" rx="1.25" fill="url(#bar)"/>
-  <g transform="translate(760,40)">
-    <g><circle class="dotbg" cx="0"  cy="0" r="3.5"/><circle class="dotfg d1" cx="0"  cy="0" r="3.5" fill="#8ea2ff"/></g>
-    <g><circle class="dotbg" cx="14" cy="0" r="3.5"/><circle class="dotfg d2" cx="14" cy="0" r="3.5" fill="#8ea2ff"/></g>
-    <g><circle class="dotbg" cx="28" cy="0" r="3.5"/><circle class="dotfg d3" cx="28" cy="0" r="3.5" fill="#8ea2ff"/></g>
-    <g><circle class="dotbg" cx="42" cy="0" r="3.5"/><circle class="dotfg d4" cx="42" cy="0" r="3.5" fill="#8ea2ff"/></g>
-    <g><circle class="dotbg" cx="56" cy="0" r="3.5"/><circle class="dotfg d5" cx="56" cy="0" r="3.5" fill="#8ea2ff"/></g>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="318" viewBox="0 0 880 318" role="img" aria-label="Repository showcase">
+<defs>
+  <linearGradient id="rbg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#0c1122"/><stop offset="100%" stop-color="#080b17"/>
+  </linearGradient>
+  <linearGradient id="redge" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.26"/>
+    <stop offset="50%" stop-color="#ffffff" stop-opacity="0.05"/>
+    <stop offset="100%" stop-color="#ffffff" stop-opacity="0.14"/>
+  </linearGradient>
+  <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#a78bfa"/>
+  </linearGradient>
+  <clipPath id="rcard"><rect x="1" y="1" width="878" height="316" rx="24"/></clipPath>
+  <style>
+    .f { font-family: ui-sans-serif, -apple-system, "SF Pro Text", "Segoe UI", Inter, Helvetica, Arial, sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+    .cd { opacity: 0; animation: cd 18s cubic-bezier(.22,1,.36,1) infinite; transform-box: fill-box; }
+    @keyframes cd {
+      0%   { opacity: 0; transform: translateY(16px) scale(.99); }
+      3.5% { opacity: 1; transform: translateY(0) scale(1); }
+      44%  { opacity: 1; transform: translateY(0) scale(1); }
+      48%  { opacity: 0; transform: translateY(-14px) scale(.99); }
+      100% { opacity: 0; transform: translateY(-14px) scale(.99); }
+    }
+    .lbl { opacity: 0; animation: cd 18s cubic-bezier(.22,1,.36,1) infinite; transform-box: fill-box; }
+    .prog { animation: fill 9s linear infinite; transform-box: fill-box; transform-origin: left center; }
+    @keyframes fill { 0% { transform: scaleX(0) } 100% { transform: scaleX(1) } }
+    .dotfg { opacity: 0; animation: dfg 18s steps(1,end) infinite; }
+    @keyframes dfg { 0% { opacity: 1 } 50% { opacity: 0 } 100% { opacity: 0 } }
+    .sweepR { animation: swR 18s cubic-bezier(.4,0,.2,1) infinite; }
+    @keyframes swR { 0% { transform: translateX(-300px) } 11% { transform: translateX(1010px) } 50% { transform: translateX(-300px) } 61% { transform: translateX(1010px) } 100% { transform: translateX(1010px) } }
+    @media (prefers-reduced-motion: reduce) {
+      .cd, .lbl, .prog, .dotfg, .sweepR { animation: none } .cd, .lbl { opacity: 1 }
+      .pageB { display: none }
+    }
+  </style>
+</defs>
+<g clip-path="url(#rcard)">
+<rect width="880" height="318" fill="url(#rbg)"/>
+<rect class="sweepR" x="-160" y="-40" width="130" height="420" fill="#ffffff" fill-opacity=".05" transform="skewX(-16)"/>
+</g>
+<rect x="1" y="1" width="878" height="316" rx="24" fill="none" stroke="url(#redge)" stroke-width="1.5"/>
+<g class="pageA">
+<text class="f mono lbl" style="animation-delay:0.00s" x="44" y="42" fill="#5b6789" font-size="11.5" letter-spacing="2.4">PRODUCTS  ·  OPEN SOURCE</text>
+<g class="cd" style="animation-delay:0.10s">
+<rect x="44" y="74" width="252" height="88" rx="15" fill="#ffffff" fill-opacity=".055" stroke="#ffffff" stroke-opacity=".12"/>
+<text class="f" x="62" y="103" fill="#f1f5ff" font-size="14" font-weight="700">PureGlass</text>
+<circle cx="67" cy="121" r="4.4" fill="#F05138"/>
+<text class="f" x="78" y="125" fill="#a9b6d6" font-size="11.5">Swift</text>
+<text class="f" x="278" y="125" fill="#f5c451" font-size="11" font-weight="600" text-anchor="end">★ 5</text>
+<text class="f" x="62" y="146" fill="#8d9ac0" font-size="11">Liquid Glass Mac cleaner for macOS 26</text>
+</g>
+<g class="cd" style="animation-delay:0.19s">
+<rect x="314" y="74" width="252" height="88" rx="15" fill="#ffffff" fill-opacity=".035" stroke="#ffffff" stroke-opacity=".09" stroke-dasharray="5 4"/>
+<text class="f" x="332" y="103" fill="#f1f5ff" font-size="14" font-weight="700">TechPulse</text>
+<g transform="translate(532,91)" opacity=".75"><rect x="0" y="4.2" width="9" height="6.4" rx="1.6" fill="#94a3c8"/><path d="M1.9 4.2V2.9a2.6 2.6 0 0 1 5.2 0v1.3" fill="none" stroke="#94a3c8" stroke-width="1.3"/></g>
+<text class="f" x="544" y="101" fill="#94a3c8" font-size="10" font-weight="600" text-anchor="end" opacity="0"></text>
+<circle cx="337" cy="121" r="4.4" fill="#F05138"/>
+<text class="f" x="348" y="125" fill="#a9b6d6" font-size="11.5">Swift 6</text>
+<text class="f" x="548" y="125" fill="#94a3c8" font-size="11" font-weight="600" text-anchor="end">Private</text>
+<text class="f" x="332" y="146" fill="#8d9ac0" font-size="11">On-device ML tech-news platform</text>
+</g>
+<g class="cd" style="animation-delay:0.28s">
+<rect x="584" y="74" width="252" height="88" rx="15" fill="#ffffff" fill-opacity=".055" stroke="#ffffff" stroke-opacity=".12"/>
+<text class="f" x="602" y="103" fill="#f1f5ff" font-size="14" font-weight="700">codemaster</text>
+<circle cx="607" cy="121" r="4.4" fill="#f1e05a"/>
+<text class="f" x="618" y="125" fill="#a9b6d6" font-size="11.5">JavaScript</text>
+<text class="f" x="818" y="125" fill="#f5c451" font-size="11" font-weight="600" text-anchor="end">★ 2</text>
+<text class="f" x="602" y="146" fill="#8d9ac0" font-size="11">Code review &amp; refactor suggestions</text>
+</g>
+<g class="cd" style="animation-delay:0.37s">
+<rect x="44" y="178" width="252" height="88" rx="15" fill="#ffffff" fill-opacity=".055" stroke="#ffffff" stroke-opacity=".12"/>
+<text class="f" x="62" y="207" fill="#f1f5ff" font-size="14" font-weight="700">Purchase-Prediction-ANN</text>
+<circle cx="67" cy="225" r="4.4" fill="#3572A5"/>
+<text class="f" x="78" y="229" fill="#a9b6d6" font-size="11.5">Python</text>
+<text class="f" x="278" y="229" fill="#f5c451" font-size="11" font-weight="600" text-anchor="end">★ 1</text>
+<text class="f" x="62" y="250" fill="#8d9ac0" font-size="11">Purchase-intent ANN · 0.81 AUC-ROC</text>
+</g>
+<g class="cd" style="animation-delay:0.46s">
+<rect x="314" y="178" width="252" height="88" rx="15" fill="#ffffff" fill-opacity=".055" stroke="#ffffff" stroke-opacity=".12"/>
+<text class="f" x="332" y="207" fill="#f1f5ff" font-size="14" font-weight="700">BookFy</text>
+<circle cx="337" cy="225" r="4.4" fill="#4F5D95"/>
+<text class="f" x="348" y="229" fill="#a9b6d6" font-size="11.5">PHP · MySQL</text>
+<text class="f" x="548" y="229" fill="#f5c451" font-size="11" font-weight="600" text-anchor="end">★ 1</text>
+<text class="f" x="332" y="250" fill="#8d9ac0" font-size="11">Virtual library management platform</text>
+</g>
+<g class="cd" style="animation-delay:0.55s">
+<rect x="584" y="178" width="252" height="88" rx="15" fill="#38bdf8" fill-opacity=".09" stroke="#38bdf8" stroke-opacity=".28"/>
+<text class="f" x="602" y="212" fill="#38bdf8" font-size="13" font-weight="700">Open source, MIT</text>
+<text class="f" x="602" y="234" fill="#a9b6d6" font-size="11">Free to read, fork and ship.</text>
+<text class="f" x="602" y="251" fill="#a9b6d6" font-size="11">PureGlass ships via Homebrew.</text>
+</g>
+</g>
+<g class="pageB">
+<text class="f mono lbl" style="animation-delay:9.00s" x="44" y="42" fill="#5b6789" font-size="11.5" letter-spacing="2.4">CLIENT PLATFORMS  ·  PRIVATE</text>
+<g class="cd" style="animation-delay:9.10s">
+<rect x="44" y="74" width="252" height="88" rx="15" fill="#ffffff" fill-opacity=".035" stroke="#ffffff" stroke-opacity=".09" stroke-dasharray="5 4"/>
+<text class="f" x="62" y="103" fill="#f1f5ff" font-size="14" font-weight="700">kozmonet</text>
+<g transform="translate(262,91)" opacity=".75"><rect x="0" y="4.2" width="9" height="6.4" rx="1.6" fill="#94a3c8"/><path d="M1.9 4.2V2.9a2.6 2.6 0 0 1 5.2 0v1.3" fill="none" stroke="#94a3c8" stroke-width="1.3"/></g>
+<text class="f" x="274" y="101" fill="#94a3c8" font-size="10" font-weight="600" text-anchor="end" opacity="0"></text>
+<circle cx="67" cy="121" r="4.4" fill="#f7523f"/>
+<text class="f" x="78" y="125" fill="#a9b6d6" font-size="11.5">Blade</text>
+<text class="f" x="278" y="125" fill="#94a3c8" font-size="11" font-weight="600" text-anchor="end">Private</text>
+<text class="f" x="62" y="146" fill="#8d9ac0" font-size="11">kozmonet.com.tr — e-commerce platform</text>
+</g>
+<g class="cd" style="animation-delay:9.19s">
+<rect x="314" y="74" width="252" height="88" rx="15" fill="#ffffff" fill-opacity=".035" stroke="#ffffff" stroke-opacity=".09" stroke-dasharray="5 4"/>
+<text class="f" x="332" y="103" fill="#f1f5ff" font-size="14" font-weight="700">valego</text>
+<g transform="translate(532,91)" opacity=".75"><rect x="0" y="4.2" width="9" height="6.4" rx="1.6" fill="#94a3c8"/><path d="M1.9 4.2V2.9a2.6 2.6 0 0 1 5.2 0v1.3" fill="none" stroke="#94a3c8" stroke-width="1.3"/></g>
+<text class="f" x="544" y="101" fill="#94a3c8" font-size="10" font-weight="600" text-anchor="end" opacity="0"></text>
+<circle cx="337" cy="121" r="4.4" fill="#563d7c"/>
+<text class="f" x="348" y="125" fill="#a9b6d6" font-size="11.5">CSS · PHP</text>
+<text class="f" x="548" y="125" fill="#94a3c8" font-size="11" font-weight="600" text-anchor="end">Private</text>
+<text class="f" x="332" y="146" fill="#8d9ac0" font-size="11">valego.com.tr — backend &amp; infrastructure</text>
+</g>
+<g class="cd" style="animation-delay:9.28s">
+<rect x="584" y="74" width="252" height="88" rx="15" fill="#ffffff" fill-opacity=".035" stroke="#ffffff" stroke-opacity=".09" stroke-dasharray="5 4"/>
+<text class="f" x="602" y="103" fill="#f1f5ff" font-size="14" font-weight="700">iremkalkanpromakeup</text>
+<g transform="translate(802,91)" opacity=".75"><rect x="0" y="4.2" width="9" height="6.4" rx="1.6" fill="#94a3c8"/><path d="M1.9 4.2V2.9a2.6 2.6 0 0 1 5.2 0v1.3" fill="none" stroke="#94a3c8" stroke-width="1.3"/></g>
+<text class="f" x="814" y="101" fill="#94a3c8" font-size="10" font-weight="600" text-anchor="end" opacity="0"></text>
+<circle cx="607" cy="121" r="4.4" fill="#4F5D95"/>
+<text class="f" x="618" y="125" fill="#a9b6d6" font-size="11.5">PHP</text>
+<text class="f" x="818" y="125" fill="#94a3c8" font-size="11" font-weight="600" text-anchor="end">Private</text>
+<text class="f" x="602" y="146" fill="#8d9ac0" font-size="11">Booking &amp; portfolio site, end-to-end</text>
+</g>
+<g class="cd" style="animation-delay:9.37s">
+<rect x="44" y="178" width="252" height="88" rx="15" fill="#ffffff" fill-opacity=".035" stroke="#ffffff" stroke-opacity=".09" stroke-dasharray="5 4"/>
+<text class="f" x="62" y="207" fill="#f1f5ff" font-size="14" font-weight="700">businessturkey</text>
+<g transform="translate(262,195)" opacity=".75"><rect x="0" y="4.2" width="9" height="6.4" rx="1.6" fill="#94a3c8"/><path d="M1.9 4.2V2.9a2.6 2.6 0 0 1 5.2 0v1.3" fill="none" stroke="#94a3c8" stroke-width="1.3"/></g>
+<text class="f" x="274" y="205" fill="#94a3c8" font-size="10" font-weight="600" text-anchor="end" opacity="0"></text>
+<circle cx="67" cy="225" r="4.4" fill="#4F5D95"/>
+<text class="f" x="78" y="229" fill="#a9b6d6" font-size="11.5">PHP</text>
+<text class="f" x="278" y="229" fill="#94a3c8" font-size="11" font-weight="600" text-anchor="end">Private</text>
+<text class="f" x="62" y="250" fill="#8d9ac0" font-size="11">businessturkiye.co — corporate platform</text>
+</g>
+<g class="cd" style="animation-delay:9.46s">
+<rect x="314" y="178" width="252" height="88" rx="15" fill="#ffffff" fill-opacity=".035" stroke="#ffffff" stroke-opacity=".09" stroke-dasharray="5 4"/>
+<text class="f" x="332" y="207" fill="#f1f5ff" font-size="14" font-weight="700">riverra-eticaret</text>
+<g transform="translate(532,195)" opacity=".75"><rect x="0" y="4.2" width="9" height="6.4" rx="1.6" fill="#94a3c8"/><path d="M1.9 4.2V2.9a2.6 2.6 0 0 1 5.2 0v1.3" fill="none" stroke="#94a3c8" stroke-width="1.3"/></g>
+<text class="f" x="544" y="205" fill="#94a3c8" font-size="10" font-weight="600" text-anchor="end" opacity="0"></text>
+<circle cx="337" cy="225" r="4.4" fill="#4F5D95"/>
+<text class="f" x="348" y="229" fill="#a9b6d6" font-size="11.5">PHP · Laravel</text>
+<text class="f" x="548" y="229" fill="#94a3c8" font-size="11" font-weight="600" text-anchor="end">Private</text>
+<text class="f" x="332" y="250" fill="#8d9ac0" font-size="11">Drop-in e-commerce package for Laravel</text>
+</g>
+<g class="cd" style="animation-delay:9.55s">
+<rect x="584" y="178" width="252" height="88" rx="15" fill="#a78bfa" fill-opacity=".09" stroke="#a78bfa" stroke-opacity=".28"/>
+<text class="f" x="602" y="212" fill="#a78bfa" font-size="13" font-weight="700">Private by design</text>
+<text class="f" x="602" y="234" fill="#a9b6d6" font-size="11">Client code stays closed —</text>
+<text class="f" x="602" y="251" fill="#a9b6d6" font-size="11">the work stays visible.</text>
+</g>
+</g>
+<rect x="44" y="298" width="792" height="2.5" rx="1.25" fill="#ffffff" fill-opacity=".08"/>
+<rect class="prog" x="44" y="298" width="792" height="2.5" rx="1.25" fill="url(#bar)"/>
+<g transform="translate(818,38)">
+<circle cx="0" cy="0" r="3.5" fill="#ffffff" fill-opacity=".16"/><circle class="dotfg" cx="0" cy="0" r="3.5" fill="#8ea2ff"/>
+<circle cx="14" cy="0" r="3.5" fill="#ffffff" fill-opacity=".16"/><circle class="dotfg" style="animation-delay:9s" cx="14" cy="0" r="3.5" fill="#8ea2ff"/>
+</g>
 </svg>

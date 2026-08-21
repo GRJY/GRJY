@@ -3,63 +3,63 @@
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/giray-akbulut-33a695219/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-  <a href="mailto:akbulutgiray@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>
-  <a href="https://github.com/GRJY?tab=repositories"><img src="https://img.shields.io/badge/Repositories-181717?style=flat-square&logo=github&logoColor=white" alt="Repositories"/></a>
-  <img src="https://img.shields.io/badge/İstanbul%2C%20TR-3b4252?style=flat-square&logo=googlemaps&logoColor=white" alt="Location"/>
+  <a href="https://www.linkedin.com/in/giray-akbulut-33a695219/"><img src="./assets/badge-linkedin.svg" height="40" alt="LinkedIn"/></a>
+  <a href="mailto:akbulutgiray@gmail.com"><img src="./assets/badge-email.svg" height="40" alt="Email"/></a>
+  <a href="https://github.com/GRJY?tab=repositories"><img src="./assets/badge-github.svg" height="40" alt="Projects"/></a>
+  <img src="./assets/badge-location.svg" height="40" alt="İstanbul, Türkiye"/>
 </p>
 
----
-
-### 👋 About
-
-Full Stack & iOS developer with a Computer Engineering degree (Beykent University, 2025). I focus on **performance-critical** and **security-first** products — from on-device machine learning and Swift 6 concurrency to end-to-end encrypted communication and scalable web backends.
-
-- 🧠 On-device ML (TF-IDF / Logistic Regression, ~95% accuracy) and applied neural networks (Keras)
-- 🔐 End-to-end encryption with Curve25519 + AES-GCM 256-bit (sub-50ms latency)
-- 📱 Native iOS & macOS with Swift 6 Concurrency (Actors), SwiftUI, Combine, MapKit, CryptoKit
-- 🌐 Full stack web — PHP/Laravel, MySQL, JavaScript, AWS (Lambda, DynamoDB), REST APIs
-
----
-
-### 📦 Featured Repositories
+<p align="center">
+  <img src="./assets/about.svg" width="880" alt="What I build — on-device ML, end-to-end crypto, native Apple apps, full-stack web"/>
+</p>
 
 <p align="center">
-  <a href="https://github.com/GRJY?tab=repositories">
-    <img src="./assets/repos.svg" width="880" alt="Featured repositories — animated showcase"/>
+  <a href="https://www.linkedin.com/in/giray-akbulut-33a695219/">
+    <img src="./assets/linkedin-card.svg" width="880" alt="LinkedIn — Giray Akbulut, Full Stack & iOS Developer"/>
   </a>
 </p>
 
+---
+
+### 📦 Repositories
+
+<p align="center">
+  <a href="https://github.com/GRJY?tab=repositories">
+    <img src="./assets/repos.svg" width="880" alt="Repository showcase — public projects and private client platforms"/>
+  </a>
+</p>
+
+**Public — open source**
+
 | Repository | What it is | Stack |
 |---|---|---|
-| **[PureGlass](https://github.com/GRJY/PureGlass)** ⭐ | Native Liquid Glass Mac cleaner & system monitor for macOS 26 — free, private, fully offline | Swift 6 · SwiftUI |
+| **[PureGlass](https://github.com/GRJY/PureGlass)** ⭐ | Native Liquid Glass Mac cleaner & system monitor for macOS 26 — free, private, fully offline. `brew install --cask GRJY/tap/pureglass` | Swift 6 · SwiftUI |
 | **[codemaster](https://github.com/GRJY/codemaster)** | Code review & improvement-suggestion system | JavaScript |
-| **[Prediction-Of-Customer-Purchases-ANN](https://github.com/GRJY/Prediction-Of-Customer-Purchases-ANN)** | Purchase-intent ANN — 80.5% accuracy, 0.81 AUC-ROC on 550K rows | Python · Keras |
+| **[Purchase-Prediction ANN](https://github.com/GRJY/Prediction-Of-Customer-Purchases-ANN)** | Purchase-intent neural network — 80.5% accuracy, 0.81 AUC-ROC on 550K rows | Python · Keras |
 | **[BookFy](https://github.com/GRJY/BookFy-Virtual-Library-Management-Application)** | Virtual library management platform (graduation project) | PHP · MySQL · jQuery |
-| **[homebrew-tap](https://github.com/GRJY/homebrew-tap)** | Homebrew tap — `brew install --cask GRJY/tap/pureglass` | Ruby |
+
+**🔒 Private — products & client platforms**
+
+> Source stays closed (client and product code), listed here so the work itself stays visible.
+
+| Project | What it is | Stack | Live |
+|---|---|---|---|
+| `TechPulse` | On-device ML tech-news platform — filters global innovations & live streams with context-preserving instant translation | Swift 6 · SwiftUI · Python (ML) · Supabase | — |
+| `kozmonet` | Full e-commerce platform, designed & built end-to-end | Laravel · Blade · MySQL | [kozmonet.com.tr](https://kozmonet.com.tr) |
+| `valego` | Backend & infrastructure for a production storefront | PHP · MySQL | [valego.com.tr](https://valego.com.tr) |
+| `iremkalkanpromakeup` | Booking & portfolio site, designed & built end-to-end | PHP · MySQL | [iremkalkanpromakeup.com](https://iremkalkanpromakeup.com) |
+| `businessturkey` | Corporate platform, designed & built end-to-end | PHP · MySQL | [businessturkiye.co](https://businessturkiye.co) |
+| `riverra-eticaret` | Drop-in e-commerce package for Laravel, managed from a central Riverra panel | Laravel · PHP | — |
 
 ---
 
-### 🚀 Startup & Product Work
+### 🚀 Product Work
 
 | Project | Description | Stack |
 |---|---|---|
 | **TechPulse** | On-device ML news platform that filters global tech innovations & live streams, with context-preserving instant translation. | Swift 6 · SwiftUI · Python (ML) · Supabase |
 | **Campers** | Safety-first camping platform with dynamic maps, offline sync, and E2EE emergency communication. | Swift · Combine · CryptoKit · Supabase · MapKit |
 | **LiquidGlassKit** | Custom SwiftUI library — glassmorphism UI, advanced animations, and an SOS module. | Swift · SwiftUI |
-
----
-
-### 🌐 Client & Freelance Web Work
-
-Production websites I designed and built end-to-end:
-
-| Site | Role |
-|---|---|
-| [businessturkiye.co](https://businessturkiye.co) | Designed & developed |
-| [iremkalkanpromakeup.com](https://iremkalkanpromakeup.com) | Designed & developed |
-| [kozmonet.com.tr](https://kozmonet.com.tr) | Designed & developed |
-| [valego.com.tr](https://valego.com.tr) | Backend & infrastructure |
 
 ---
 
@@ -95,14 +95,7 @@ Production websites I designed and built end-to-end:
 ### 📊 GitHub
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=GRJY&show_icons=true&hide_border=true&count_private=true&theme=tokyonight&bg_color=0d1117&icon_color=8ea2ff&title_color=8ea2ff"/>
-    <img src="https://github-readme-stats.vercel.app/api?username=GRJY&show_icons=true&hide_border=true&count_private=true" height="160" alt="GitHub Stats"/>
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=GRJY&layout=compact&hide_border=true&theme=tokyonight&bg_color=0d1117&title_color=8ea2ff"/>
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=GRJY&layout=compact&hide_border=true" height="160" alt="Top Languages"/>
-  </picture>
+  <img src="./assets/stats.svg" width="880" alt="GitHub statistics"/>
 </p>
 
 <p align="center">

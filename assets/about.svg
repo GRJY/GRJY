@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="236" viewBox="0 0 880 236" role="img" aria-label="What I build">
+<defs>
+  <linearGradient id="abg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#0c1122"/><stop offset="100%" stop-color="#080b17"/>
+  </linearGradient>
+  <linearGradient id="aedge" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.26"/>
+    <stop offset="50%" stop-color="#ffffff" stop-opacity="0.05"/>
+    <stop offset="100%" stop-color="#ffffff" stop-opacity="0.14"/>
+  </linearGradient>
+  <clipPath id="acard"><rect x="1" y="1" width="878" height="234" rx="24"/></clipPath>
+  <style>
+    .f { font-family: ui-sans-serif, -apple-system, "SF Pro Text", "Segoe UI", Inter, Helvetica, Arial, sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+    .card { opacity: 0; animation: cin 15s cubic-bezier(.22,1,.36,1) infinite; transform-box: fill-box; }
+    @keyframes cin {
+      0%   { opacity: 0; transform: translateY(16px); }
+      6%   { opacity: 1; transform: translateY(0); }
+      92%  { opacity: 1; transform: translateY(0); }
+      98%  { opacity: 0; transform: translateY(-10px); }
+      100% { opacity: 0; transform: translateY(-10px); }
+    }
+    .accent { animation: acc 15s cubic-bezier(.22,1,.36,1) infinite; transform-box: fill-box; transform-origin: left center; }
+    @keyframes acc {
+      0% { transform: scaleX(0) } 14% { transform: scaleX(1) } 94% { transform: scaleX(1) } 100% { transform: scaleX(0) }
+    }
+    .beat { animation: beat 2.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    @keyframes beat { 0%,100% { opacity:.55; transform: scale(.85) } 50% { opacity:1; transform: scale(1.25) } }
+    .scan { animation: scan 3.2s ease-in-out infinite; transform-box: fill-box; }
+    @keyframes scan { 0%,100% { transform: translateY(0); opacity:.55 } 50% { transform: translateY(7px); opacity:1 } }
+    .spin { animation: spin 7s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    @keyframes spin { 0%,100% { transform: scaleX(1) } 50% { transform: scaleX(.18) } }
+    .sweepA { animation: swA 15s cubic-bezier(.4,0,.2,1) infinite; }
+    @keyframes swA { 0% { transform: translateX(-300px) } 13% { transform: translateX(1010px) } 100% { transform: translateX(1010px) } }
+    @media (prefers-reduced-motion: reduce) {
+      .card, .accent, .beat, .scan, .spin, .sweepA { animation: none } .card { opacity: 1 }
+    }
+  </style>
+</defs>
+<g clip-path="url(#acard)">
+<rect width="880" height="236" fill="url(#abg)"/>
+<rect class="sweepA" x="-160" y="-40" width="130" height="330" fill="#ffffff" fill-opacity=".05" transform="skewX(-16)"/>
+</g>
+<rect x="1" y="1" width="878" height="234" rx="24" fill="none" stroke="url(#aedge)" stroke-width="1.5"/>
+<text class="f mono" x="44" y="38" fill="#5b6789" font-size="11.5" letter-spacing="2.4">WHAT I BUILD</text>
+<g class="card" style="animation-delay:0.12s">
+<rect x="44" y="60" width="186" height="152" rx="16" fill="#ffffff" fill-opacity=".045" stroke="#ffffff" stroke-opacity=".10"/>
+<rect class="accent" x="60" y="60" width="154" height="2.5" rx="1.25" fill="#38bdf8" style="animation-delay:0.12s"/>
+<g transform="translate(64,82)"><g stroke="#38bdf8" stroke-width="1.6" fill="none" stroke-linecap="round"><line x1="4" y1="6" x2="14" y2="4"/><line x1="4" y1="6" x2="14" y2="13"/><line x1="4" y1="18" x2="14" y2="13"/><line x1="4" y1="18" x2="14" y2="21"/><line x1="14" y1="4" x2="24" y2="12"/><line x1="14" y1="13" x2="24" y2="12"/><line x1="14" y1="21" x2="24" y2="12"/></g><g fill="#38bdf8"><circle cx="4" cy="6" r="2.6"/><circle cx="4" cy="18" r="2.6"/><circle cx="14" cy="4" r="2.6"/><circle cx="14" cy="13" r="2.6"/><circle cx="14" cy="21" r="2.6"/><circle class="beat" cx="24" cy="12" r="3"/></g></g>
+<text class="f" x="64" y="144" fill="#f1f5ff" font-size="14" font-weight="700">On-device ML</text>
+<text class="f" x="64" y="166" fill="#8d9ac0" font-size="11.5">TF-IDF + Logistic Regression</text>
+<text class="f" x="64" y="183" fill="#8d9ac0" font-size="11.5">at ~95% accuracy, plus</text>
+<text class="f" x="64" y="200" fill="#8d9ac0" font-size="11.5">applied Keras neural nets</text>
+</g>
+<g class="card" style="animation-delay:0.25s">
+<rect x="246" y="60" width="186" height="152" rx="16" fill="#ffffff" fill-opacity=".045" stroke="#ffffff" stroke-opacity=".10"/>
+<rect class="accent" x="262" y="60" width="154" height="2.5" rx="1.25" fill="#a78bfa" style="animation-delay:0.25s"/>
+<g transform="translate(266,82)"><g stroke="#a78bfa" stroke-width="1.8" fill="none" stroke-linecap="round"><path d="M8 11V7.5a5 5 0 0 1 10 0V11"/></g><rect x="4.5" y="11" width="17" height="12" rx="3" fill="none" stroke="#a78bfa" stroke-width="1.8"/><circle class="beat" cx="13" cy="17" r="2.2" fill="#a78bfa"/></g>
+<text class="f" x="266" y="144" fill="#f1f5ff" font-size="14" font-weight="700">End-to-end crypto</text>
+<text class="f" x="266" y="166" fill="#8d9ac0" font-size="11.5">Curve25519 key exchange +</text>
+<text class="f" x="266" y="183" fill="#8d9ac0" font-size="11.5">AES-GCM 256-bit payloads</text>
+<text class="f" x="266" y="200" fill="#8d9ac0" font-size="11.5">at sub-50 ms latency</text>
+</g>
+<g class="card" style="animation-delay:0.38s">
+<rect x="448" y="60" width="186" height="152" rx="16" fill="#ffffff" fill-opacity=".045" stroke="#ffffff" stroke-opacity=".10"/>
+<rect class="accent" x="464" y="60" width="154" height="2.5" rx="1.25" fill="#34d399" style="animation-delay:0.38s"/>
+<g transform="translate(468,82)"><rect x="6" y="2.5" width="14" height="21" rx="3.5" fill="none" stroke="#34d399" stroke-width="1.8"/><line x1="10.5" y1="6" x2="15.5" y2="6" stroke="#34d399" stroke-width="1.6" stroke-linecap="round"/><rect class="scan" x="8.5" y="9" width="9" height="2.4" rx="1.2" fill="#34d399" fill-opacity=".8"/><circle cx="13" cy="20" r="1.4" fill="#34d399"/></g>
+<text class="f" x="468" y="144" fill="#f1f5ff" font-size="14" font-weight="700">Native Apple apps</text>
+<text class="f" x="468" y="166" fill="#8d9ac0" font-size="11.5">Swift 6 concurrency (actors),</text>
+<text class="f" x="468" y="183" fill="#8d9ac0" font-size="11.5">SwiftUI, Combine, MapKit</text>
+<text class="f" x="468" y="200" fill="#8d9ac0" font-size="11.5">and CryptoKit</text>
+</g>
+<g class="card" style="animation-delay:0.51s">
+<rect x="650" y="60" width="186" height="152" rx="16" fill="#ffffff" fill-opacity=".045" stroke="#ffffff" stroke-opacity=".10"/>
+<rect class="accent" x="666" y="60" width="154" height="2.5" rx="1.25" fill="#fb923c" style="animation-delay:0.51s"/>
+<g transform="translate(670,82)"><circle cx="13" cy="13" r="10" fill="none" stroke="#fb923c" stroke-width="1.7"/><ellipse class="spin" cx="13" cy="13" rx="4.4" ry="10" fill="none" stroke="#fb923c" stroke-width="1.4" stroke-opacity=".8"/><line x1="3.4" y1="9.5" x2="22.6" y2="9.5" stroke="#fb923c" stroke-width="1.4" stroke-opacity=".8"/><line x1="3.4" y1="16.5" x2="22.6" y2="16.5" stroke="#fb923c" stroke-width="1.4" stroke-opacity=".8"/></g>
+<text class="f" x="670" y="144" fill="#f1f5ff" font-size="14" font-weight="700">Full-stack web</text>
+<text class="f" x="670" y="166" fill="#8d9ac0" font-size="11.5">Laravel / PHP, MySQL, JS,</text>
+<text class="f" x="670" y="183" fill="#8d9ac0" font-size="11.5">AWS Lambda + DynamoDB</text>
+<text class="f" x="670" y="200" fill="#8d9ac0" font-size="11.5">and REST APIs</text>
+</g>
+</svg>

@@ -94,6 +94,88 @@ def commit_days(since):
     return days, active
 
 
+def rnd(*seed):
+    """Deterministic jitter — the same grid must render the same every run."""
+    h = 2166136261
+    for value in seed:
+        h = ((h ^ (value & 0xFFFFFFFF)) * 16777619) & 0xFFFFFFFF
+    return h / 0xFFFFFFFF
+
+
+# Eight scatter vectors for the cell fragments and six for the finer ash, all
+# blowing up and to the right so the whole year drifts on one wind.
+FRAGMENTS = [(26, -11, -30), (38, -19, 36), (31, -26, -12), (47, -13, 50),
+             (22, -20, 16), (43, -28, -40), (54, -16, 27), (34, -8, -48)]
+
+# (dx, dy, lingers) — a few specks ride the wind further and fade late, so the
+# air still has ash in it after the burst has gone.
+MOTES = [(72, -26, False), (88, -17, False), (63, -34, False),
+         (104, -29, True), (81, -41, True), (69, -13, True)]
+
+BURST = "cubic-bezier(.5,.05,.92,.35)"      # dust accelerates as the wind takes it
+RETURN = "cubic-bezier(.23,1,.32,1)"        # and decelerates as it settles back
+
+
+def motion_css():
+    css = ["""
+  .g { animation-duration: 14s; animation-iteration-count: infinite;
+       transform-box: fill-box; transform-origin: center; }
+  .core { animation-name: core; }
+  @keyframes core {
+    0%, 54%    { opacity: 1; transform: none; }
+    56%        { opacity: 1; transform: scale(1.16); }
+    60%        { opacity: 0; transform: scale(.9); }
+    79%        { opacity: 0; transform: scale(.9); }
+    91%, 100%  { opacity: 1; transform: none; }
+  }
+  .ash { animation-name: ash; }
+  @keyframes ash {
+    0%, 54%   { opacity: 1; transform: none;
+                animation-timing-function: %(burst)s; }
+    57%%      { opacity: 1; transform: scale(1.14); }
+    65%%      { opacity: 0; transform: translate(17px,-13px) scale(.22); }
+    79%%      { opacity: 0; transform: translate(17px,-13px) scale(.22);
+                animation-timing-function: %(ret)s; }
+    91%%, 100%% { opacity: 1; transform: none; }
+  }
+""".replace("%(burst)s", BURST).replace("%(ret)s", RETURN).replace("%%", "%")]
+
+    for i, (dx, dy, rot) in enumerate(FRAGMENTS):
+        css.append(f"""
+  .f{i} {{ animation-name: f{i}; }}
+  @keyframes f{i} {{
+    0%, 54%  {{ opacity: 1; transform: none;
+                animation-timing-function: {BURST}; }}
+    56%      {{ opacity: 1; transform: translate({dx * 0.05:.1f}px,{dy * 0.05:.1f}px)
+                           rotate({rot * 0.06:.1f}deg); }}
+    69%      {{ opacity: 0; transform: translate({dx}px,{dy}px) rotate({rot}deg) scale(.26); }}
+    79%      {{ opacity: 0; transform: translate({dx}px,{dy}px) rotate({rot}deg) scale(.26);
+                animation-timing-function: {RETURN}; }}
+    91%, 100% {{ opacity: 1; transform: none; }}
+  }}""")
+
+    for i, (dx, dy, lingers) in enumerate(MOTES):
+        gone = 88 if lingers else 74
+        peak = ".55" if lingers else ".85"
+        css.append(f"""
+  .m{i} {{ animation-name: m{i}; }}
+  @keyframes m{i} {{
+    0%, 55%  {{ opacity: 0; transform: none;
+                animation-timing-function: {BURST}; }}
+    58%      {{ opacity: {peak}; transform: translate({dx * 0.1:.1f}px,{dy * 0.1:.1f}px); }}
+    {gone}%  {{ opacity: 0; transform: translate({dx}px,{dy}px) scale(.12); }}
+    100%     {{ opacity: 0; transform: translate({dx}px,{dy}px) scale(.12); }}
+  }}""")
+
+    css.append("""
+  @media (prefers-reduced-motion: reduce) {
+    .g { animation: none; }
+    [class*="m"].g { opacity: 0; }
+  }
+""")
+    return "".join(css)
+
+
 def build(days, theme, total, since_date, private_repos):
     colors = SCALE[theme]
     counts = sorted(c for c in days.values() if c)
@@ -118,30 +200,8 @@ def build(days, theme, total, since_date, private_repos):
     grid_top = 104
     h = grid_top + 7 * PITCH + 44
 
-    css = """
-  .cell { animation: dust 11s cubic-bezier(.4,0,.2,1) infinite;
-          transform-box: fill-box; transform-origin: center; }
-  @keyframes dust {
-    0%, 50% { opacity: 1; transform: translate(0,0) scale(1); }
-    62%     { opacity: 0; transform: translate(15px,-13px) scale(.18); }
-    88%     { opacity: 0; transform: translate(15px,-13px) scale(.18); }
-    100%    { opacity: 1; transform: translate(0,0) scale(1); }
-  }
-  .mote { opacity: 0; animation: mote 11s cubic-bezier(.4,0,.2,1) infinite;
-          transform-box: fill-box; transform-origin: center; }
-  @keyframes mote {
-    0%, 50% { opacity: 0; transform: translate(0,0) scale(1); }
-    56%     { opacity: .85; }
-    72%     { opacity: 0; transform: translate(34px,-30px) scale(.2); }
-    100%    { opacity: 0; transform: translate(34px,-30px) scale(.2); }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .cell, .mote { animation: none; }
-    .mote { opacity: 0; }
-  }
-"""
     p = open_svg(h, f"{total} commits in the past year, private work included",
-                 theme, extra_css=css)
+                 theme, extra_css=motion_css())
     p += eyebrow_row(0, 22, "COMMITS, PAST YEAR", W)
     p.append(txt(0, 58, f"{total:,}", cls="metric fg", d=45))
     label_x = 20 + 18 * len(f"{total:,}")
@@ -174,20 +234,37 @@ def build(days, theme, total, since_date, private_repos):
             lv = level(count)
             x = GRID_X + w * PITCH
             y = grid_top + d * PITCH
-            # Columns disintegrate left to right, so the snap sweeps the year.
-            wave = w * 42 + d * 9
-            p.append(f'<rect class="cell" x="{x}" y="{y}" width="{CELL}" height="{CELL}" '
-                     f'rx="2.5" fill="{colors[lv]}" style="animation-delay:{wave}ms">'
+            colour = colors[lv]
+            # The dissolve front sweeps left to right, ragged rather than ruled.
+            wave = int(w * 38 + d * 7 + rnd(w, d, 7) * 240)
+
+            if lv == 0:
+                p.append(f'<rect class="g ash" x="{x}" y="{y}" width="{CELL}" height="{CELL}" '
+                         f'rx="2.5" fill="{colour}" style="animation-delay:{wave}ms"/>')
+                continue
+
+            # A day with commits comes apart into quarters, each on its own wind.
+            p.append(f'<rect class="g core" x="{x}" y="{y}" width="{CELL}" height="{CELL}" '
+                     f'rx="2.5" fill="{colour}" style="animation-delay:{wave}ms">'
                      f'<title>{day.isoformat()}: {count} commits</title></rect>')
-            if lv >= 3:
-                for k in (0, 1):
-                    p.append(f'<circle class="mote" cx="{x + 3 + k * 5}" cy="{y + 4 + k * 4}" '
-                             f'r="1.4" fill="{colors[lv]}" '
-                             f'style="animation-delay:{wave + 60 + k * 90}ms"/>')
+            for k, (fx, fy) in enumerate(((0.5, 0.5), (5.5, 0.5), (0.5, 5.5), (5.5, 5.5))):
+                variant = int(rnd(w, d, k) * len(FRAGMENTS))
+                lag = wave + int(rnd(w, d, k, 3) * 90)
+                p.append(f'<rect class="g f{variant}" x="{x + fx}" y="{y + fy}" width="5" '
+                         f'height="5" rx="1.2" fill="{colour}" '
+                         f'style="animation-delay:{lag}ms"/>')
+            for k in range(3 + (lv >= 3)):
+                variant = int(rnd(w, d, k, 11) * len(MOTES))
+                cx = x + 2 + rnd(w, d, k, 17) * (CELL - 4)
+                cy = y + 2 + rnd(w, d, k, 23) * (CELL - 4)
+                r = 1 + rnd(w, d, k, 29) * 1.3
+                lag = wave + int(rnd(w, d, k, 31) * 140)
+                p.append(f'<circle class="g m{variant}" cx="{cx:.1f}" cy="{cy:.1f}" '
+                         f'r="{r:.1f}" fill="{colour}" style="animation-delay:{lag}ms"/>')
 
     legend_y = grid_top + 7 * PITCH + 22
     p.append(f'<g class="e"{delay(180)}>')
-    p.append(txt(GRID_X, legend_y, "Every square is a day. The snap runs left to right.",
+    p.append(txt(GRID_X, legend_y, "Every square is a day. The snap sweeps the year, then it all comes back.",
                  cls="small fnt"))
     p.append(txt(W - 124, legend_y, "Less", cls="small fnt", anchor="end"))
     for i, color in enumerate(colors):

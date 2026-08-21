@@ -12,10 +12,10 @@
 
 ### Stack
 
-**Languages** — Swift · Python · JavaScript · PHP · Java · C++
-**Apple** — SwiftUI · Swift 6 Concurrency · Combine · CryptoKit · MapKit
-**Web & cloud** — Laravel · MySQL · AWS Lambda · DynamoDB · Supabase · REST
-**Machine learning** — Keras · scikit-learn · TF-IDF · Core ML
+**Languages** — Swift · Python · JavaScript · PHP · Java · C++<br/>
+**Apple** — SwiftUI · Swift 6 Concurrency · Combine · CryptoKit · MapKit<br/>
+**Web & cloud** — Laravel · MySQL · AWS Lambda · DynamoDB · Supabase · REST<br/>
+**Machine learning** — Keras · scikit-learn · TF-IDF · Core ML<br/>
 **Design** — Figma · Framer
 
 ### Certifications

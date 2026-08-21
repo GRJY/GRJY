@@ -95,7 +95,7 @@
 ### 📊 GitHub
 
 <p align="center">
-  <img src="./assets/stats.svg?v=2" width="880" alt="GitHub statistics"/>
+  <img src="./assets/stats.svg?v=3" width="880" alt="GitHub statistics"/>
 </p>
 
 <p align="center">

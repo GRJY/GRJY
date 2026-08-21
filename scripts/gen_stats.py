@@ -75,11 +75,14 @@ def build(user):
     top = sorted(sizes.items(), key=lambda kv: -kv[1])[:6]
     total = sum(s for _, s in top) or 1
 
+    def plural(n, word):
+        return word if n == 1 else word + "s"
+
     metrics = [
-        ("Public repos", repo_count),
-        ("Total stars", stars),
+        (plural(repo_count, "Public repo"), repo_count),
+        ("Total " + plural(stars, "star"), stars),
         ("Contributions (1y)", contributions),
-        ("Followers", followers),
+        (plural(followers, "Follower"), followers),
     ]
 
     W, H = 880, 250

@@ -1,16 +1,12 @@
-<h1 align="center">Giray Akbulut</h1>
-<p align="center"><b>Full Stack &amp; iOS Developer</b> · İstanbul, Türkiye</p>
-
 <p align="center">
-  Computer Engineer building high-performance mobile and web products —
-  <br/>
-  on-device ML, end-to-end encrypted systems, and production web platforms.
+  <img src="./assets/header.svg" width="880" alt="Giray Akbulut — Full Stack & iOS Developer"/>
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/giray-akbulut-33a695219/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-  <a href="mailto:akbulutgiray@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat&logo=gmail&logoColor=white" alt="Email"/></a>
-  <img src="https://img.shields.io/badge/İstanbul%2C%20TR-555?style=flat&logo=googlemaps&logoColor=white" alt="Location"/>
+  <a href="https://www.linkedin.com/in/giray-akbulut-33a695219/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+  <a href="mailto:akbulutgiray@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>
+  <a href="https://github.com/GRJY?tab=repositories"><img src="https://img.shields.io/badge/Repositories-181717?style=flat-square&logo=github&logoColor=white" alt="Repositories"/></a>
+  <img src="https://img.shields.io/badge/İstanbul%2C%20TR-3b4252?style=flat-square&logo=googlemaps&logoColor=white" alt="Location"/>
 </p>
 
 ---
@@ -21,8 +17,26 @@ Full Stack & iOS developer with a Computer Engineering degree (Beykent Universit
 
 - 🧠 On-device ML (TF-IDF / Logistic Regression, ~95% accuracy) and applied neural networks (Keras)
 - 🔐 End-to-end encryption with Curve25519 + AES-GCM 256-bit (sub-50ms latency)
-- 📱 Native iOS with Swift 6 Concurrency (Actors), SwiftUI, Combine, MapKit, CryptoKit
-- 🌐 Full stack web — PHP/MySQL, JavaScript, AWS (Lambda, DynamoDB), REST APIs
+- 📱 Native iOS & macOS with Swift 6 Concurrency (Actors), SwiftUI, Combine, MapKit, CryptoKit
+- 🌐 Full stack web — PHP/Laravel, MySQL, JavaScript, AWS (Lambda, DynamoDB), REST APIs
+
+---
+
+### 📦 Featured Repositories
+
+<p align="center">
+  <a href="https://github.com/GRJY?tab=repositories">
+    <img src="./assets/repos.svg" width="880" alt="Featured repositories — animated showcase"/>
+  </a>
+</p>
+
+| Repository | What it is | Stack |
+|---|---|---|
+| **[PureGlass](https://github.com/GRJY/PureGlass)** ⭐ | Native Liquid Glass Mac cleaner & system monitor for macOS 26 — free, private, fully offline | Swift 6 · SwiftUI |
+| **[codemaster](https://github.com/GRJY/codemaster)** | Code review & improvement-suggestion system | JavaScript |
+| **[Prediction-Of-Customer-Purchases-ANN](https://github.com/GRJY/Prediction-Of-Customer-Purchases-ANN)** | Purchase-intent ANN — 80.5% accuracy, 0.81 AUC-ROC on 550K rows | Python · Keras |
+| **[BookFy](https://github.com/GRJY/BookFy-Virtual-Library-Management-Application)** | Virtual library management platform (graduation project) | PHP · MySQL · jQuery |
+| **[homebrew-tap](https://github.com/GRJY/homebrew-tap)** | Homebrew tap — `brew install --cask GRJY/tap/pureglass` | Ruby |
 
 ---
 
@@ -49,31 +63,25 @@ Production websites I designed and built end-to-end:
 
 ---
 
-### 🎓 Selected Projects
-
-- **BookFy** — Virtual Library Management (graduation project): HTML5/CSS3/JS, jQuery, PHP, MySQL, AJAX, OpenLibrary API.
-- **Customer Purchase Prediction (ANN)** — Two-layer neural network (Keras), 80.5% accuracy, AUC-ROC 0.81 on a 550K-row Kaggle dataset.
-
----
-
 ### 🛠️ Tech Stack
 
 <p>
-  <img src="https://img.shields.io/badge/Swift-F05138?style=flat&logo=swift&logoColor=white" alt="Swift"/>
-  <img src="https://img.shields.io/badge/SwiftUI-0071E3?style=flat&logo=swift&logoColor=white" alt="SwiftUI"/>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python"/>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black" alt="JavaScript"/>
-  <img src="https://img.shields.io/badge/Java-007396?style=flat&logo=openjdk&logoColor=white" alt="Java"/>
-  <img src="https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white" alt="PHP"/>
-  <img src="https://img.shields.io/badge/C++-00599C?style=flat&logo=cplusplus&logoColor=white" alt="C++"/>
+  <img src="https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=swift&logoColor=white" alt="Swift"/>
+  <img src="https://img.shields.io/badge/SwiftUI-0071E3?style=flat-square&logo=swift&logoColor=white" alt="SwiftUI"/>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript"/>
+  <img src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white" alt="Java"/>
+  <img src="https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP"/>
+  <img src="https://img.shields.io/badge/Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white" alt="Laravel"/>
+  <img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white" alt="C++"/>
 </p>
 <p>
-  <img src="https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazonwebservices&logoColor=white" alt="AWS"/>
-  <img src="https://img.shields.io/badge/Supabase-3FCF8E?style=flat&logo=supabase&logoColor=white" alt="Supabase"/>
-  <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white" alt="MySQL"/>
-  <img src="https://img.shields.io/badge/Keras-D00000?style=flat&logo=keras&logoColor=white" alt="Keras"/>
-  <img src="https://img.shields.io/badge/Figma-F24E1E?style=flat&logo=figma&logoColor=white" alt="Figma"/>
-  <img src="https://img.shields.io/badge/Framer-0055FF?style=flat&logo=framer&logoColor=white" alt="Framer"/>
+  <img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white" alt="AWS"/>
+  <img src="https://img.shields.io/badge/Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=white" alt="Supabase"/>
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL"/>
+  <img src="https://img.shields.io/badge/Keras-D00000?style=flat-square&logo=keras&logoColor=white" alt="Keras"/>
+  <img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white" alt="Figma"/>
+  <img src="https://img.shields.io/badge/Framer-0055FF?style=flat-square&logo=framer&logoColor=white" alt="Framer"/>
 </p>
 
 ---
@@ -84,7 +92,19 @@ Production websites I designed and built end-to-end:
 
 ---
 
+### 📊 GitHub
+
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=GRJY&show_icons=true&hide_border=true&count_private=true&theme=default" height="160" alt="GitHub Stats"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=GRJY&layout=compact&hide_border=true&theme=default" height="160" alt="Top Languages"/>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=GRJY&show_icons=true&hide_border=true&count_private=true&theme=tokyonight&bg_color=0d1117&icon_color=8ea2ff&title_color=8ea2ff"/>
+    <img src="https://github-readme-stats.vercel.app/api?username=GRJY&show_icons=true&hide_border=true&count_private=true" height="160" alt="GitHub Stats"/>
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=GRJY&layout=compact&hide_border=true&theme=tokyonight&bg_color=0d1117&title_color=8ea2ff"/>
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=GRJY&layout=compact&hide_border=true" height="160" alt="Top Languages"/>
+  </picture>
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/GRJY/GRJY/output/snake.svg" width="880" alt="Contribution activity"/>
 </p>

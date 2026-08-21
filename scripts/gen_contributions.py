@@ -117,52 +117,54 @@ RETURN = "cubic-bezier(.23,1,.32,1)"        # and decelerates as it settles back
 
 
 def motion_css():
+    # 9s cycle: solid until 30%, dust by 44%, back by 74%. The first burst lands
+    # under three seconds after the image loads instead of after eight.
     css = ["""
-  .g { animation-duration: 14s; animation-iteration-count: infinite;
+  .g { animation-duration: 9s; animation-iteration-count: infinite;
        transform-box: fill-box; transform-origin: center; }
   .core { animation-name: core; }
   @keyframes core {
-    0%, 54%    { opacity: 1; transform: none; }
-    56%        { opacity: 1; transform: scale(1.16); }
-    60%        { opacity: 0; transform: scale(.9); }
-    79%        { opacity: 0; transform: scale(.9); }
-    91%, 100%  { opacity: 1; transform: none; }
+    0%, 30%    { opacity: 1; transform: none; }
+    32%        { opacity: 1; transform: scale(1.16); }
+    37%        { opacity: 0; transform: scale(.9); }
+    58%        { opacity: 0; transform: scale(.9); }
+    74%, 100%  { opacity: 1; transform: none; }
   }
   .ash { animation-name: ash; }
   @keyframes ash {
-    0%, 54%   { opacity: 1; transform: none;
-                animation-timing-function: %(burst)s; }
-    57%%      { opacity: 1; transform: scale(1.14); }
-    65%%      { opacity: 0; transform: translate(17px,-13px) scale(.22); }
-    79%%      { opacity: 0; transform: translate(17px,-13px) scale(.22);
-                animation-timing-function: %(ret)s; }
-    91%%, 100%% { opacity: 1; transform: none; }
+    0%, 30%   { opacity: 1; transform: none;
+                animation-timing-function: BURST_C; }
+    32%       { opacity: 1; transform: scale(1.14); }
+    44%       { opacity: 0; transform: translate(17px,-13px) scale(.22); }
+    58%       { opacity: 0; transform: translate(17px,-13px) scale(.22);
+                animation-timing-function: RETURN_C; }
+    74%, 100% { opacity: 1; transform: none; }
   }
-""".replace("%(burst)s", BURST).replace("%(ret)s", RETURN).replace("%%", "%")]
+""".replace("BURST_C", BURST).replace("RETURN_C", RETURN)]
 
     for i, (dx, dy, rot) in enumerate(FRAGMENTS):
         css.append(f"""
   .f{i} {{ animation-name: f{i}; }}
   @keyframes f{i} {{
-    0%, 54%  {{ opacity: 1; transform: none;
+    0%, 30%  {{ opacity: 1; transform: none;
                 animation-timing-function: {BURST}; }}
-    56%      {{ opacity: 1; transform: translate({dx * 0.05:.1f}px,{dy * 0.05:.1f}px)
+    32%      {{ opacity: 1; transform: translate({dx * 0.05:.1f}px,{dy * 0.05:.1f}px)
                            rotate({rot * 0.06:.1f}deg); }}
-    69%      {{ opacity: 0; transform: translate({dx}px,{dy}px) rotate({rot}deg) scale(.26); }}
-    79%      {{ opacity: 0; transform: translate({dx}px,{dy}px) rotate({rot}deg) scale(.26);
+    48%      {{ opacity: 0; transform: translate({dx}px,{dy}px) rotate({rot}deg) scale(.26); }}
+    58%      {{ opacity: 0; transform: translate({dx}px,{dy}px) rotate({rot}deg) scale(.26);
                 animation-timing-function: {RETURN}; }}
-    91%, 100% {{ opacity: 1; transform: none; }}
+    74%, 100% {{ opacity: 1; transform: none; }}
   }}""")
 
     for i, (dx, dy, lingers) in enumerate(MOTES):
-        gone = 88 if lingers else 74
+        gone = 66 if lingers else 53
         peak = ".55" if lingers else ".85"
         css.append(f"""
   .m{i} {{ animation-name: m{i}; }}
   @keyframes m{i} {{
-    0%, 55%  {{ opacity: 0; transform: none;
+    0%, 31%  {{ opacity: 0; transform: none;
                 animation-timing-function: {BURST}; }}
-    58%      {{ opacity: {peak}; transform: translate({dx * 0.1:.1f}px,{dy * 0.1:.1f}px); }}
+    34%      {{ opacity: {peak}; transform: translate({dx * 0.1:.1f}px,{dy * 0.1:.1f}px); }}
     {gone}%  {{ opacity: 0; transform: translate({dx}px,{dy}px) scale(.12); }}
     100%     {{ opacity: 0; transform: translate({dx}px,{dy}px) scale(.12); }}
   }}""")
@@ -236,7 +238,7 @@ def build(days, theme, total, since_date, private_repos):
             y = grid_top + d * PITCH
             colour = colors[lv]
             # The dissolve front sweeps left to right, ragged rather than ruled.
-            wave = int(w * 38 + d * 7 + rnd(w, d, 7) * 240)
+            wave = int(w * 21 + d * 5 + rnd(w, d, 7) * 150)
 
             if lv == 0:
                 p.append(f'<rect class="g ash" x="{x}" y="{y}" width="{CELL}" height="{CELL}" '
@@ -249,7 +251,7 @@ def build(days, theme, total, since_date, private_repos):
                      f'<title>{day.isoformat()}: {count} commits</title></rect>')
             for k, (fx, fy) in enumerate(((0.5, 0.5), (5.5, 0.5), (0.5, 5.5), (5.5, 5.5))):
                 variant = int(rnd(w, d, k) * len(FRAGMENTS))
-                lag = wave + int(rnd(w, d, k, 3) * 90)
+                lag = wave + int(rnd(w, d, k, 3) * 70)
                 p.append(f'<rect class="g f{variant}" x="{x + fx}" y="{y + fy}" width="5" '
                          f'height="5" rx="1.2" fill="{colour}" '
                          f'style="animation-delay:{lag}ms"/>')
@@ -258,7 +260,7 @@ def build(days, theme, total, since_date, private_repos):
                 cx = x + 2 + rnd(w, d, k, 17) * (CELL - 4)
                 cy = y + 2 + rnd(w, d, k, 23) * (CELL - 4)
                 r = 1 + rnd(w, d, k, 29) * 1.3
-                lag = wave + int(rnd(w, d, k, 31) * 140)
+                lag = wave + int(rnd(w, d, k, 31) * 110)
                 p.append(f'<circle class="g m{variant}" cx="{cx:.1f}" cy="{cy:.1f}" '
                          f'r="{r:.1f}" fill="{colour}" style="animation-delay:{lag}ms"/>')
 

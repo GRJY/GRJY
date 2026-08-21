@@ -24,7 +24,3 @@
 <img src="./assets/contributions-dark.svg#gh-dark-mode-only" width="880" alt="Commits in the past year, private work included"/><img src="./assets/contributions-light.svg#gh-light-mode-only" width="880" alt="Commits in the past year, private work included"/>
 
 <img src="./assets/stats-dark.svg#gh-dark-mode-only" width="880" alt="Language mix across every repository"/><img src="./assets/stats-light.svg#gh-light-mode-only" width="880" alt="Language mix across every repository"/>
-
----
-
-[LinkedIn](https://www.linkedin.com/in/giray-akbulut-33a695219/) · [akbulutgiray@gmail.com](mailto:akbulutgiray@gmail.com) · İstanbul, Türkiye

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="167" height="34" viewBox="0 0 167 34" role="img" aria-label="businessturkiye.co">
+<style>
+  :root {
+    --canvas:  #ffffff;
+    --surface: #f6f8fa;
+    --line:    #d1d9e0;
+    --fg:      #1f2328;
+    --muted:   #59636e;
+    --faint:   #818b98;
+    --accent:  #0969da;
+  }
+  text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif; }
+  .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+  .fg { fill: var(--fg); }
+  .mut { fill: var(--muted); }
+  .fnt { fill: var(--faint); }
+  .acc { fill: var(--accent); }
+  .surf { fill: var(--surface); }
+  .canvas { fill: var(--canvas); }
+  .line-f { fill: var(--line); }
+  .line-s { stroke: var(--line); }
+  .display { font-size: 42px; font-weight: 600; letter-spacing: -1.25px; }
+  .lead { font-size: 16.5px; font-weight: 500; letter-spacing: -0.2px; }
+  .body { font-size: 13px; }
+  .small { font-size: 11.5px; }
+  .title { font-size: 13.5px; font-weight: 600; letter-spacing: -0.1px; }
+  .metric { font-size: 30px; font-weight: 600; letter-spacing: -0.8px;
+            font-variant-numeric: tabular-nums; }
+  .eyebrow { font-size: 10px; font-weight: 600; letter-spacing: 1.6px; }
+  .e { animation: e 260ms cubic-bezier(0.23, 1, 0.32, 1) both; transform-box: fill-box; }
+  @keyframes e {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .grow { animation: grow 520ms cubic-bezier(0.23, 1, 0.32, 1) both; transform-box: fill-box;
+          transform-origin: left center; }
+  @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @media (prefers-reduced-motion: reduce) {
+    .e, .grow { animation: none; }
+  }
+</style>
+<rect width="167" height="34" class="canvas"/>
+<rect x="0.75" y="0.75" width="165.5" height="32.5" rx="9" class="surf line-s"/>
+<g transform="translate(13,9)"><circle cx="8" cy="8" r="7" fill="none" stroke="var(--muted)" stroke-width="1.3"/><ellipse cx="8" cy="8" rx="3" ry="7" fill="none" stroke="var(--muted)" stroke-width="1.3"/><path d="M1.4 8h13.2" stroke="var(--muted)" stroke-width="1.3"/></g>
+<text x="34" y="22" class="body fg">businessturkiye.co</text>
+</svg>

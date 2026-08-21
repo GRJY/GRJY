@@ -13,7 +13,8 @@ import sys
 import urllib.request
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-from design import W, MONO, esc, open_svg, txt, rule, eyebrow_row, delay  # noqa: E402
+from design import (W, MONO, base_css, esc, open_svg, txt, rule, eyebrow_row,  # noqa: E402
+                    delay)
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 ASSETS = ROOT / "assets"
@@ -100,6 +101,7 @@ def capabilities(theme):
 
 
 
+
 # ------------------------------------------------------------- flagship
 
 APPLE = ("M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 "
@@ -169,6 +171,41 @@ def flagship(theme):
 
 
 
+# ---------------------------------------------------------------- chips
+
+GLOBE = ('<circle cx="8" cy="8" r="7" fill="none" stroke="var(--muted)" stroke-width="1.3"/>'
+         '<ellipse cx="8" cy="8" rx="3" ry="7" fill="none" stroke="var(--muted)" stroke-width="1.3"/>'
+         '<path d="M1.4 8h13.2" stroke="var(--muted)" stroke-width="1.3"/>')
+APPLE_MARK = (f'<path d="{APPLE}" fill="var(--muted)" transform="translate(-1.2,0) scale(0.68)"/>')
+PLAY = ('<path d="M2.6 1.4 12.4 8 2.6 14.6z" fill="none" stroke="var(--muted)" '
+        'stroke-width="1.3" stroke-linejoin="round"/>')
+
+CHIPS = [
+    ("chip-valego-web", "valego.com.tr", GLOBE),
+    ("chip-valego-ios", "App Store", APPLE_MARK),
+    ("chip-valego-play", "Google Play", PLAY),
+    ("chip-bt-web", "businessturkiye.co", GLOBE),
+    ("chip-bt-ios", "App Store", APPLE_MARK),
+    ("chip-bt-play", "Google Play", PLAY),
+]
+
+
+def chip(name, label, icon, theme):
+    """A single link, drawn to the same spec as the cards it sits under."""
+    w = 44 + int(6.85 * len(label))
+    h = 34
+    p = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" '
+         f'viewBox="0 0 {w} {h}" role="img" aria-label="{esc(label)}">',
+         f'<style>{base_css(theme)}</style>',
+         f'<rect width="{w}" height="{h}" class="canvas"/>',
+         f'<rect x="0.75" y="0.75" width="{w - 1.5}" height="{h - 1.5}" rx="9" '
+         f'class="surf line-s"/>',
+         f'<g transform="translate(13,9)">{icon}</g>',
+         txt(34, 22, label, cls="body fg"),
+         '</svg>']
+    return name, p
+
+
 # ----------------------------------------------------------------- apps
 
 SCREENS = [
@@ -207,8 +244,9 @@ def apps(theme):
         # Dynamic Island, so the frame reads as the device the screenshot came from.
         p.append(f'<rect x="{x + PHONE_W // 2 - 24}" y="{top + 13}" width="48" height="13" '
                  f'rx="6.5" fill="#000000"/>')
-        p.append(txt(x, caption, app, cls="title fg"))
-        p.append(txt(x, caption + 17, screen, cls="small fnt"))
+        mid = x + PHONE_W // 2
+        p.append(txt(mid, caption, app, cls="title fg", anchor="middle"))
+        p.append(txt(mid, caption + 17, screen, cls="small fnt", anchor="middle"))
         p.append('</g>')
     p.append("</svg>")
     return "apps", p
@@ -234,16 +272,16 @@ GROUPS = [
          ["SwiftUI component library — glass", "materials, motion, SOS module."]),
     ]),
     ("AGENCY WORK  ·  ATOMEDYA", [
-        ("valego social", "PHP · Flutter", "Private", True,
-         ["Social layer for Valego — feed,", "campaigns. 191 commits."]),
-        ("internal consoles", "TypeScript · Blade", "Private", True,
+        ("Internal consoles", "TypeScript · Blade", "Private", True,
          ["Operations and quoting panels used", "across the agency. 599 commits."]),
-        ("kozmonet", "Blade", "kozmonet.com.tr", True,
-         ["End-to-end e-commerce platform.", "96 commits."]),
-        ("iremkalkanpromakeup", "PHP", "iremkalkanpromakeup.com", True,
-         ["Booking and portfolio site, built", "end-to-end. 93 commits."]),
-        ("riverra", "Laravel", "Private", True,
-         ["Drop-in e-commerce package driven", "from a central panel. 40 commits."]),
+        ("Social platform", "PHP · Flutter", "Private", True,
+         ["Feed, campaigns and messaging for", "a consumer product. 191 commits."]),
+        ("E-commerce platform", "Blade · MySQL", "Private", True,
+         ["Storefront, catalogue and checkout,", "built end-to-end. 96 commits."]),
+        ("Booking platform", "PHP · MySQL", "Private", True,
+         ["Appointments, portfolio and admin", "for a studio brand. 93 commits."]),
+        ("E-commerce package", "Laravel", "Private", True,
+         ["Drop-in storefront driven from a", "central agency panel. 40 commits."]),
         (None, None, None, None, []),
     ]),
 ]
@@ -251,10 +289,10 @@ GROUPS = [
 # Ranked by commits authored in the past year. Only projects whose product is
 # already public are named; the rest of the agency work stays as a count.
 PRIVATE_WORK = [
-    ("valego", "854 commits"), ("businessturkey", "811 commits"),
-    ("internal consoles", "599 commits"), ("valego social", "191 commits"),
-    ("kozmonet", "96 commits"), ("iremkalkanpromakeup", "93 commits"),
-    ("riverra", "40 commits"), ("TechPulse", "27 commits"),
+    ("Valet platform", "854 commits"), ("B2B platform", "811 commits"),
+    ("Internal consoles", "599 commits"), ("Social platform", "191 commits"),
+    ("E-commerce platform", "96 commits"), ("Booking platform", "93 commits"),
+    ("E-commerce package", "40 commits"), ("On-device ML app", "27 commits"),
 ]
 
 # The one deliberate loop on the page: the private projects have no repository to
@@ -578,6 +616,9 @@ if __name__ == "__main__":
         for builder in (hero, capabilities, flagship, apps, showcase, linkedin,
                         credentials):
             name, parts = builder(theme)
+            write(f"{name}-{theme}", parts)
+        for chip_name, label, icon in CHIPS:
+            name, parts = chip(chip_name, label, icon, theme)
             write(f"{name}-{theme}", parts)
         if user:
             name, parts = stats(user, theme)

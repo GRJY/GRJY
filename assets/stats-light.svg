@@ -9,17 +9,6 @@
     --faint:   #818b98;
     --accent:  #0969da;
   }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --canvas:  #0d1117;
-      --surface: #151b23;
-      --line:    #3d444d;
-      --fg:      #f0f6fc;
-      --muted:   #9198a1;
-      --faint:   #656c76;
-      --accent:  #4493f8;
-    }
-  }
   text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif; }
   .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
   .fg { fill: var(--fg); }
@@ -64,7 +53,7 @@
 <text x="226" y="96" class="small fnt">Total stars</text>
 </g>
 <g class="e" style="animation-delay:135ms">
-<text x="452" y="76" class="metric fg">86</text>
+<text x="452" y="76" class="metric fg">84</text>
 <text x="452" y="96" class="small fnt">Contributions, past year</text>
 </g>
 <g class="e" style="animation-delay:180ms">
@@ -74,31 +63,31 @@
 <g class="grow" style="animation-delay:135ms">
 <defs><clipPath id="barclip"><rect x="0" y="118" width="880" height="6" rx="3"/></clipPath></defs>
 <g clip-path="url(#barclip)">
-<rect x="0.0" y="118" width="577.0" height="6" fill="#F05138"/>
-<rect x="577.0" y="118" width="174.9" height="6" fill="#f1e05a"/>
-<rect x="751.9" y="118" width="54.6" height="6" fill="#e34c26"/>
-<rect x="806.5" y="118" width="43.1" height="6" fill="#663399"/>
-<rect x="849.6" y="118" width="30.4" height="6" fill="#3572A5"/>
+<rect x="0.0" y="118" width="563.3" height="6" fill="#F05138"/>
+<rect x="563.3" y="118" width="170.7" height="6" fill="#f1e05a"/>
+<rect x="734.0" y="118" width="53.3" height="6" fill="#e34c26"/>
+<rect x="787.3" y="118" width="50.6" height="6" fill="#3572A5"/>
+<rect x="837.9" y="118" width="42.1" height="6" fill="#663399"/>
 </g></g>
 <g class="e" style="animation-delay:180ms">
 <circle cx="4" cy="144" r="4" fill="#F05138"/>
-<text x="15" y="148" class="small fnt">Swift 65.6%</text>
+<text x="15" y="148" class="small fnt">Swift 64.0%</text>
 </g>
 <g class="e" style="animation-delay:210ms">
 <circle cx="104" cy="144" r="4" fill="#f1e05a"/>
-<text x="115" y="148" class="small fnt">JavaScript 19.9%</text>
+<text x="115" y="148" class="small fnt">JavaScript 19.4%</text>
 </g>
 <g class="e" style="animation-delay:240ms">
 <circle cx="236" cy="144" r="4" fill="#e34c26"/>
-<text x="247" y="148" class="small fnt">HTML 6.2%</text>
+<text x="247" y="148" class="small fnt">HTML 6.1%</text>
 </g>
 <g class="e" style="animation-delay:270ms">
-<circle cx="323" cy="144" r="4" fill="#663399"/>
-<text x="334" y="148" class="small fnt">CSS 4.9%</text>
+<circle cx="323" cy="144" r="4" fill="#3572A5"/>
+<text x="334" y="148" class="small fnt">Python 5.7%</text>
 </g>
 <g class="e" style="animation-delay:300ms">
-<circle cx="404" cy="144" r="4" fill="#3572A5"/>
-<text x="415" y="148" class="small fnt">Python 3.5%</text>
+<circle cx="423" cy="144" r="4" fill="#663399"/>
+<text x="434" y="148" class="small fnt">CSS 4.8%</text>
 </g>
 <text x="880" y="148" class="small fnt mono" text-anchor="end" opacity=".8">updated daily</text>
 </svg>

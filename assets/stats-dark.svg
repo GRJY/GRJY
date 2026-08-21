@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="168" viewBox="0 0 880 168" role="img" aria-label="GitHub activity">
+<style>
+  :root {
+    --canvas:  #0d1117;
+    --surface: #151b23;
+    --line:    #3d444d;
+    --fg:      #f0f6fc;
+    --muted:   #9198a1;
+    --faint:   #656c76;
+    --accent:  #4493f8;
+  }
+  text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif; }
+  .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+  .fg { fill: var(--fg); }
+  .mut { fill: var(--muted); }
+  .fnt { fill: var(--faint); }
+  .acc { fill: var(--accent); }
+  .surf { fill: var(--surface); }
+  .canvas { fill: var(--canvas); }
+  .line-f { fill: var(--line); }
+  .line-s { stroke: var(--line); }
+  .display { font-size: 42px; font-weight: 600; letter-spacing: -1.25px; }
+  .lead { font-size: 16.5px; font-weight: 500; letter-spacing: -0.2px; }
+  .body { font-size: 13px; }
+  .small { font-size: 11.5px; }
+  .title { font-size: 13.5px; font-weight: 600; letter-spacing: -0.1px; }
+  .metric { font-size: 30px; font-weight: 600; letter-spacing: -0.8px;
+            font-variant-numeric: tabular-nums; }
+  .eyebrow { font-size: 10px; font-weight: 600; letter-spacing: 1.6px; }
+  .e { animation: e 260ms cubic-bezier(0.23, 1, 0.32, 1) both; transform-box: fill-box; }
+  @keyframes e {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .grow { animation: grow 520ms cubic-bezier(0.23, 1, 0.32, 1) both; transform-box: fill-box;
+          transform-origin: left center; }
+  @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @media (prefers-reduced-motion: reduce) {
+    .e, .grow { animation: none; }
+  }
+</style>
+<rect width="880" height="168" class="canvas"/>
+<g class="e">
+<text x="0" y="22" class="eyebrow fnt">GITHUB</text>
+<rect x="55" y="18" width="825" height="1" class="line-f"/>
+</g>
+<g class="e" style="animation-delay:45ms">
+<text x="0" y="76" class="metric fg">7</text>
+<text x="0" y="96" class="small fnt">Public repositories</text>
+</g>
+<g class="e" style="animation-delay:90ms">
+<text x="226" y="76" class="metric fg">11</text>
+<text x="226" y="96" class="small fnt">Total stars</text>
+</g>
+<g class="e" style="animation-delay:135ms">
+<text x="452" y="76" class="metric fg">84</text>
+<text x="452" y="96" class="small fnt">Contributions, past year</text>
+</g>
+<g class="e" style="animation-delay:180ms">
+<text x="678" y="76" class="metric fg">1</text>
+<text x="678" y="96" class="small fnt">Follower</text>
+</g>
+<g class="grow" style="animation-delay:135ms">
+<defs><clipPath id="barclip"><rect x="0" y="118" width="880" height="6" rx="3"/></clipPath></defs>
+<g clip-path="url(#barclip)">
+<rect x="0.0" y="118" width="563.3" height="6" fill="#F05138"/>
+<rect x="563.3" y="118" width="170.7" height="6" fill="#f1e05a"/>
+<rect x="734.0" y="118" width="53.3" height="6" fill="#e34c26"/>
+<rect x="787.3" y="118" width="50.6" height="6" fill="#3572A5"/>
+<rect x="837.9" y="118" width="42.1" height="6" fill="#663399"/>
+</g></g>
+<g class="e" style="animation-delay:180ms">
+<circle cx="4" cy="144" r="4" fill="#F05138"/>
+<text x="15" y="148" class="small fnt">Swift 64.0%</text>
+</g>
+<g class="e" style="animation-delay:210ms">
+<circle cx="104" cy="144" r="4" fill="#f1e05a"/>
+<text x="115" y="148" class="small fnt">JavaScript 19.4%</text>
+</g>
+<g class="e" style="animation-delay:240ms">
+<circle cx="236" cy="144" r="4" fill="#e34c26"/>
+<text x="247" y="148" class="small fnt">HTML 6.1%</text>
+</g>
+<g class="e" style="animation-delay:270ms">
+<circle cx="323" cy="144" r="4" fill="#3572A5"/>
+<text x="334" y="148" class="small fnt">Python 5.7%</text>
+</g>
+<g class="e" style="animation-delay:300ms">
+<circle cx="423" cy="144" r="4" fill="#663399"/>
+<text x="434" y="148" class="small fnt">CSS 4.8%</text>
+</g>
+<text x="880" y="148" class="small fnt mono" text-anchor="end" opacity=".8">updated daily</text>
+</svg>

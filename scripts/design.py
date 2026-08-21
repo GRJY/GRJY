@@ -12,26 +12,34 @@ SANS = ('-apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", '
 MONO = 'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace'
 EASE = "cubic-bezier(0.23, 1, 0.32, 1)"
 
-BASE_CSS = f"""
+THEMES = {
+    "light": {"canvas": "#ffffff", "surface": "#f6f8fa", "line": "#d1d9e0",
+              "fg": "#1f2328", "muted": "#59636e", "faint": "#818b98",
+              "accent": "#0969da"},
+    "dark":  {"canvas": "#0d1117", "surface": "#151b23", "line": "#3d444d",
+              "fg": "#f0f6fc", "muted": "#9198a1", "faint": "#656c76",
+              "accent": "#4493f8"},
+}
+
+
+def base_css(theme):
+    """Palette is baked in per file — GitHub picks the file, not the OS.
+
+    `prefers-color-scheme` inside an SVG follows the operating system, which is
+    wrong here: a reader on GitHub's dark theme with a light OS would get white
+    cards on a dark page. Each card is emitted twice instead and the README
+    hands GitHub the two variants.
+    """
+    t = THEMES[theme]
+    return f"""
   :root {{
-    --canvas:  #ffffff;
-    --surface: #f6f8fa;
-    --line:    #d1d9e0;
-    --fg:      #1f2328;
-    --muted:   #59636e;
-    --faint:   #818b98;
-    --accent:  #0969da;
-  }}
-  @media (prefers-color-scheme: dark) {{
-    :root {{
-      --canvas:  #0d1117;
-      --surface: #151b23;
-      --line:    #3d444d;
-      --fg:      #f0f6fc;
-      --muted:   #9198a1;
-      --faint:   #656c76;
-      --accent:  #4493f8;
-    }}
+    --canvas:  {t['canvas']};
+    --surface: {t['surface']};
+    --line:    {t['line']};
+    --fg:      {t['fg']};
+    --muted:   {t['muted']};
+    --faint:   {t['faint']};
+    --accent:  {t['accent']};
   }}
   text {{ font-family: {SANS}; }}
   .mono {{ font-family: {MONO}; }}
@@ -69,11 +77,11 @@ def esc(s):
     return (s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"))
 
 
-def open_svg(h, label, extra_css=""):
+def open_svg(h, label, theme, extra_css=""):
     return [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{h}" '
         f'viewBox="0 0 {W} {h}" role="img" aria-label="{esc(label)}">',
-        f'<style>{BASE_CSS}{extra_css}</style>',
+        f'<style>{base_css(theme)}{extra_css}</style>',
         f'<rect width="{W}" height="{h}" class="canvas"/>',
     ]
 

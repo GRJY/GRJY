@@ -1,24 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="880" height="574" viewBox="0 0 880 574" role="img" aria-label="Selected work — open source, products and client platforms">
 <style>
   :root {
-    --canvas:  #ffffff;
-    --surface: #f6f8fa;
-    --line:    #d1d9e0;
-    --fg:      #1f2328;
-    --muted:   #59636e;
-    --faint:   #818b98;
-    --accent:  #0969da;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --canvas:  #0d1117;
-      --surface: #151b23;
-      --line:    #3d444d;
-      --fg:      #f0f6fc;
-      --muted:   #9198a1;
-      --faint:   #656c76;
-      --accent:  #4493f8;
-    }
+    --canvas:  #0d1117;
+    --surface: #151b23;
+    --line:    #3d444d;
+    --fg:      #f0f6fc;
+    --muted:   #9198a1;
+    --faint:   #656c76;
+    --accent:  #4493f8;
   }
   text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif; }
   .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
@@ -48,6 +37,22 @@
   @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
   @media (prefers-reduced-motion: reduce) {
     .e, .grow { animation: none; }
+  }
+
+  .tick { opacity: 0; animation: tick 19200ms linear infinite;
+          transform-box: fill-box; }
+  @keyframes tick {
+    0%      { opacity: 0; transform: translateY(5px); filter: blur(2px); }
+    2%      { opacity: 1; transform: translateY(0);   filter: blur(0); }
+    10.5% { opacity: 1; transform: translateY(0);   filter: blur(0); }
+    12.5%  { opacity: 0; transform: translateY(-5px); filter: blur(2px); }
+    100%    { opacity: 0; transform: translateY(-5px); filter: blur(2px); }
+  }
+  .march { animation: march 24s linear infinite; }
+  @keyframes march { to { stroke-dashoffset: -32; } }
+  @media (prefers-reduced-motion: reduce) {
+    .tick, .march { animation: none; }
+    .tick:first-of-type { opacity: 1; }
   }
 </style>
 <rect width="880" height="574" class="canvas"/>
@@ -167,9 +172,48 @@
 <text x="565" y="550" class="small fnt" text-anchor="end">Private</text>
 </g>
 <g class="e" style="animation-delay:630ms">
-<rect x="599" y="468" width="281" height="96" rx="8" fill="none" class="line-s" stroke-dasharray="4 4"/>
-<text x="615" y="498" class="title mut">Private by design</text>
-<text x="615" y="520" class="small fnt">Client and product code stays closed.</text>
-<text x="615" y="537" class="small fnt">The work itself stays visible.</text>
+<rect x="599" y="468" width="281" height="96" rx="8" fill="none" class="line-s march" stroke-dasharray="4 4"/>
+<text x="615" y="498" class="title mut">8 private projects</text>
+<text x="615" y="518" class="small fnt">Code stays closed, the work stays visible.</text>
+<g class="tick" style="animation-delay:0ms">
+<g transform="translate(615,538)"><rect x="0" y="3.6" width="7.6" height="5.6" rx="1.4" fill="var(--faint)"/><path d="M1.7 3.6V2.6a2.1 2.1 0 0 1 4.2 0v1" fill="none" stroke="var(--faint)" stroke-width="1.1"/></g>
+<text x="629" y="546" class="small mut">TechPulse</text>
+<text x="864" y="546" class="small fnt" text-anchor="end">Swift 6</text>
+</g>
+<g class="tick" style="animation-delay:2400ms">
+<g transform="translate(615,538)"><rect x="0" y="3.6" width="7.6" height="5.6" rx="1.4" fill="var(--faint)"/><path d="M1.7 3.6V2.6a2.1 2.1 0 0 1 4.2 0v1" fill="none" stroke="var(--faint)" stroke-width="1.1"/></g>
+<text x="629" y="546" class="small mut">Campers</text>
+<text x="864" y="546" class="small fnt" text-anchor="end">Swift</text>
+</g>
+<g class="tick" style="animation-delay:4800ms">
+<g transform="translate(615,538)"><rect x="0" y="3.6" width="7.6" height="5.6" rx="1.4" fill="var(--faint)"/><path d="M1.7 3.6V2.6a2.1 2.1 0 0 1 4.2 0v1" fill="none" stroke="var(--faint)" stroke-width="1.1"/></g>
+<text x="629" y="546" class="small mut">LiquidGlassKit</text>
+<text x="864" y="546" class="small fnt" text-anchor="end">SwiftUI</text>
+</g>
+<g class="tick" style="animation-delay:7200ms">
+<g transform="translate(615,538)"><rect x="0" y="3.6" width="7.6" height="5.6" rx="1.4" fill="var(--faint)"/><path d="M1.7 3.6V2.6a2.1 2.1 0 0 1 4.2 0v1" fill="none" stroke="var(--faint)" stroke-width="1.1"/></g>
+<text x="629" y="546" class="small mut">kozmonet</text>
+<text x="864" y="546" class="small fnt" text-anchor="end">Laravel</text>
+</g>
+<g class="tick" style="animation-delay:9600ms">
+<g transform="translate(615,538)"><rect x="0" y="3.6" width="7.6" height="5.6" rx="1.4" fill="var(--faint)"/><path d="M1.7 3.6V2.6a2.1 2.1 0 0 1 4.2 0v1" fill="none" stroke="var(--faint)" stroke-width="1.1"/></g>
+<text x="629" y="546" class="small mut">valego</text>
+<text x="864" y="546" class="small fnt" text-anchor="end">PHP</text>
+</g>
+<g class="tick" style="animation-delay:12000ms">
+<g transform="translate(615,538)"><rect x="0" y="3.6" width="7.6" height="5.6" rx="1.4" fill="var(--faint)"/><path d="M1.7 3.6V2.6a2.1 2.1 0 0 1 4.2 0v1" fill="none" stroke="var(--faint)" stroke-width="1.1"/></g>
+<text x="629" y="546" class="small mut">iremkalkanpromakeup</text>
+<text x="864" y="546" class="small fnt" text-anchor="end">PHP</text>
+</g>
+<g class="tick" style="animation-delay:14400ms">
+<g transform="translate(615,538)"><rect x="0" y="3.6" width="7.6" height="5.6" rx="1.4" fill="var(--faint)"/><path d="M1.7 3.6V2.6a2.1 2.1 0 0 1 4.2 0v1" fill="none" stroke="var(--faint)" stroke-width="1.1"/></g>
+<text x="629" y="546" class="small mut">businessturkey</text>
+<text x="864" y="546" class="small fnt" text-anchor="end">PHP</text>
+</g>
+<g class="tick" style="animation-delay:16800ms">
+<g transform="translate(615,538)"><rect x="0" y="3.6" width="7.6" height="5.6" rx="1.4" fill="var(--faint)"/><path d="M1.7 3.6V2.6a2.1 2.1 0 0 1 4.2 0v1" fill="none" stroke="var(--faint)" stroke-width="1.1"/></g>
+<text x="629" y="546" class="small mut">riverra-eticaret</text>
+<text x="864" y="546" class="small fnt" text-anchor="end">Laravel</text>
+</g>
 </g>
 </svg>

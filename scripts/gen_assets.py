@@ -30,9 +30,9 @@ STEP = 45  # stagger between staggered elements, in ms
 
 # ---------------------------------------------------------------- hero
 
-def hero():
+def hero(theme):
     h = 172
-    p = open_svg(h, "Giray Akbulut — Full Stack and iOS Developer")
+    p = open_svg(h, "Giray Akbulut — Full Stack and iOS Developer", theme)
     p.append(txt(0, 24, "İSTANBUL, TÜRKİYE", cls="eyebrow fnt e", d=0))
     p.append(txt(0, 74, "Giray Akbulut", cls="display fg e", d=STEP))
     p.append(txt(0, 104, "Full Stack & iOS Developer  ·  Computer Engineer",
@@ -78,10 +78,10 @@ CAPS = [
 ]
 
 
-def capabilities():
+def capabilities(theme):
     h = 172
     colw, gap = 202, 24
-    p = open_svg(h, "What I build")
+    p = open_svg(h, "What I build", theme)
     p += eyebrow_row(0, 22, "WHAT I BUILD", W)
     for i, (icon, title, lines) in enumerate(CAPS):
         x = i * (colw + gap)
@@ -134,6 +134,40 @@ GROUPS = [
     ]),
 ]
 
+PRIVATE_WORK = [
+    ("TechPulse", "Swift 6"), ("Campers", "Swift"), ("LiquidGlassKit", "SwiftUI"),
+    ("kozmonet", "Laravel"), ("valego", "PHP"), ("iremkalkanpromakeup", "PHP"),
+    ("businessturkey", "PHP"), ("riverra-eticaret", "Laravel"),
+]
+
+# The one deliberate loop on the page: the private projects have no repository to
+# link to, so the tile cycles them instead. Blur bridges the two states so the
+# swap reads as one line changing rather than two lines overlapping.
+TICKER_CSS = """
+  .tick { opacity: 0; animation: tick %(cycle)sms linear infinite;
+          transform-box: fill-box; }
+  @keyframes tick {
+    0%%      { opacity: 0; transform: translateY(5px); filter: blur(2px); }
+    2%%      { opacity: 1; transform: translateY(0);   filter: blur(0); }
+    %(hold)s%% { opacity: 1; transform: translateY(0);   filter: blur(0); }
+    %(out)s%%  { opacity: 0; transform: translateY(-5px); filter: blur(2px); }
+    100%%    { opacity: 0; transform: translateY(-5px); filter: blur(2px); }
+  }
+  .march { animation: march 24s linear infinite; }
+  @keyframes march { to { stroke-dashoffset: -32; } }
+  @media (prefers-reduced-motion: reduce) {
+    .tick, .march { animation: none; }
+    .tick:first-of-type { opacity: 1; }
+  }
+"""
+
+
+def ticker_css():
+    slot = 100.0 / len(PRIVATE_WORK)
+    return TICKER_CSS % {"cycle": len(PRIVATE_WORK) * 2400,
+                         "hold": round(slot - 2, 2), "out": round(slot, 2)}
+
+
 CW, CH, GAP = 281, 96, 18
 COLX = [0, 300, 599]
 
@@ -147,12 +181,20 @@ def lock_glyph(x, y, color="var(--faint)"):
 
 def repo_card(x, y, name, lang, meta, private, lines, d):
     o = [f'<g class="e"{delay(d)}>']
-    if name is None:                                    # closing note tile
+    if name is None:                                    # private-work ticker
         o.append(f'<rect x="{x}" y="{y}" width="{CW}" height="{CH}" rx="8" fill="none" '
-                 f'class="line-s" stroke-dasharray="4 4"/>')
-        o.append(txt(x + 16, y + 30, "Private by design", cls="title mut"))
-        for j, line in enumerate(lines):
-            o.append(txt(x + 16, y + 52 + j * 17, line, cls="small fnt"))
+                 f'class="line-s march" stroke-dasharray="4 4"/>')
+        o.append(txt(x + 16, y + 30, f"{len(PRIVATE_WORK)} private projects",
+                     cls="title mut"))
+        o.append(txt(x + 16, y + 50, "Code stays closed, the work stays visible.",
+                     cls="small fnt"))
+        cycle = len(PRIVATE_WORK) * 2400
+        for j, (proj, stack) in enumerate(PRIVATE_WORK):
+            o.append(f'<g class="tick" style="animation-delay:{j * 2400}ms">')
+            o.append(lock_glyph(x + 16, y + 70))
+            o.append(txt(x + 30, y + 78, proj, cls="small mut"))
+            o.append(txt(x + CW - 16, y + 78, stack, cls="small fnt", anchor="end"))
+            o.append('</g>')
         o.append('</g>')
         return o
     o.append(f'<rect x="{x}" y="{y}" width="{CW}" height="{CH}" rx="8" class="surf line-s"/>')
@@ -171,7 +213,7 @@ def repo_card(x, y, name, lang, meta, private, lines, d):
     return o
 
 
-def showcase():
+def showcase(theme):
     # Lay the groups out first so the canvas is exactly as tall as the content.
     layout, y = [], 22
     for label, items in GROUPS:
@@ -180,7 +222,8 @@ def showcase():
         y = top + ((len(items) + 2) // 3) * (CH + GAP) + 34
     h = y - 34 - GAP + 10
 
-    p = open_svg(h, "Selected work — open source, products and client platforms")
+    p = open_svg(h, "Selected work — open source, products and client platforms",
+                 theme, extra_css=ticker_css())
     d = 0
     for label, label_y, top, items in layout:
         p += eyebrow_row(0, label_y, label, W, d=d)
@@ -202,11 +245,11 @@ LI_MARK = ("M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-
            "23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z")
 
 
-def linkedin():
+def linkedin(theme):
     h = 148
     avatar = base64.b64encode((ASSETS / "avatar.png").read_bytes()).decode()
     css = ".name { font-size: 19px; font-weight: 600; letter-spacing: -0.35px; }"
-    p = open_svg(h, "LinkedIn — Giray Akbulut", extra_css=css)
+    p = open_svg(h, "LinkedIn — Giray Akbulut", theme, extra_css=css)
     p += eyebrow_row(0, 22, "LINKEDIN", W)
     p.append('<defs><clipPath id="av"><circle cx="32" cy="82" r="28"/></clipPath></defs>')
     p.append(f'<g class="e"{delay(STEP)}>')
@@ -270,7 +313,7 @@ def fetch_stats():
     return payload["data"]["user"]
 
 
-def stats(user):
+def stats(user, theme):
     nodes = user["repositories"]["nodes"]
     sizes, colors = {}, {}
     for repo in nodes:
@@ -295,7 +338,7 @@ def stats(user):
                (followers, plural(followers, "Follower", "Followers"))]
 
     h = 168
-    p = open_svg(h, "GitHub activity")
+    p = open_svg(h, "GitHub activity", theme)
     p += eyebrow_row(0, 22, "GITHUB", W)
     for i, (value, label) in enumerate(metrics):
         x = i * 226
@@ -340,9 +383,13 @@ def write(name, parts):
 if __name__ == "__main__":
     ASSETS.mkdir(exist_ok=True)
     print("rendering cards:")
-    for builder in (hero, capabilities, showcase, linkedin):
-        write(*builder())
-    if TOKEN:
-        write(*stats(fetch_stats()))
-    else:
-        print("  skipping stats.svg (no GH_TOKEN)")
+    user = fetch_stats() if TOKEN else None
+    for theme in ("dark", "light"):
+        for builder in (hero, capabilities, showcase, linkedin):
+            name, parts = builder(theme)
+            write(f"{name}-{theme}", parts)
+        if user:
+            name, parts = stats(user, theme)
+            write(f"{name}-{theme}", parts)
+    if not user:
+        print("  skipping stats card (no GH_TOKEN)")

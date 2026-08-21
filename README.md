@@ -7,10 +7,9 @@
 **Valego** — [valego.com.tr](https://valego.com.tr) · [App Store](https://apps.apple.com/tr/app/valego-kurumsal/id6751805868) · [Google Play](https://play.google.com/store/apps/details?id=com.atomedya.dijitalvale)<br/>
 **Business Turkey** — [businessturkiye.co](https://businessturkiye.co) · [App Store](https://apps.apple.com/app/id6784730300) · [Google Play](https://play.google.com/store/apps/details?id=com.atomedya.btapp)
 
-<img src="./assets/showcase-dark.svg#gh-dark-mode-only" width="880" alt="Selected work — open source, products and agency platforms"/><img src="./assets/showcase-light.svg#gh-light-mode-only" width="880" alt="Selected work — open source, products and agency platforms"/>
+<img src="./assets/apps-dark.svg#gh-dark-mode-only" width="880" alt="Shipped apps — Valego Kurumsal and Business Turkey"/><img src="./assets/apps-light.svg#gh-light-mode-only" width="880" alt="Shipped apps — Valego Kurumsal and Business Turkey"/>
 
-**Open source** — [PureGlass](https://github.com/GRJY/PureGlass) · [Purchase-Prediction ANN](https://github.com/GRJY/Prediction-Of-Customer-Purchases-ANN) · [BookFy](https://github.com/GRJY/BookFy-Virtual-Library-Management-Application) · [Homebrew tap](https://github.com/GRJY/homebrew-tap)<br/>
-**Live client platforms** — [kozmonet.com.tr](https://kozmonet.com.tr) · [iremkalkanpromakeup.com](https://iremkalkanpromakeup.com)
+<img src="./assets/showcase-dark.svg#gh-dark-mode-only" width="880" alt="Selected work — open source, products and agency platforms"/><img src="./assets/showcase-light.svg#gh-light-mode-only" width="880" alt="Selected work — open source, products and agency platforms"/>
 
 <a href="https://www.linkedin.com/in/giray-akbulut-33a695219/#gh-dark-mode-only"><img src="./assets/linkedin-dark.svg" width="880" alt="LinkedIn — Giray Akbulut"/></a>
 <a href="https://www.linkedin.com/in/giray-akbulut-33a695219/#gh-light-mode-only"><img src="./assets/linkedin-light.svg" width="880" alt="LinkedIn — Giray Akbulut"/></a>

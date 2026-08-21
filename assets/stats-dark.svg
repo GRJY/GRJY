@@ -63,31 +63,31 @@
 <g class="grow" style="animation-delay:135ms">
 <defs><clipPath id="barclip"><rect x="0" y="118" width="880" height="6" rx="3"/></clipPath></defs>
 <g clip-path="url(#barclip)">
-<rect x="0.0" y="118" width="560.0" height="6" fill="#F05138"/>
-<rect x="560.0" y="118" width="169.8" height="6" fill="#f1e05a"/>
-<rect x="729.8" y="118" width="55.4" height="6" fill="#3572A5"/>
-<rect x="785.2" y="118" width="53.0" height="6" fill="#e34c26"/>
-<rect x="838.1" y="118" width="41.9" height="6" fill="#663399"/>
+<rect x="0.0" y="118" width="542.6" height="6" fill="#F05138"/>
+<rect x="542.6" y="118" width="164.5" height="6" fill="#f1e05a"/>
+<rect x="707.0" y="118" width="81.1" height="6" fill="#3572A5"/>
+<rect x="788.1" y="118" width="51.3" height="6" fill="#e34c26"/>
+<rect x="839.4" y="118" width="40.6" height="6" fill="#663399"/>
 </g></g>
 <g class="e" style="animation-delay:180ms">
 <circle cx="4" cy="144" r="4" fill="#F05138"/>
-<text x="15" y="148" class="small fnt">Swift 63.6%</text>
+<text x="15" y="148" class="small fnt">Swift 61.7%</text>
 </g>
 <g class="e" style="animation-delay:210ms">
 <circle cx="104" cy="144" r="4" fill="#f1e05a"/>
-<text x="115" y="148" class="small fnt">JavaScript 19.3%</text>
+<text x="115" y="148" class="small fnt">JavaScript 18.7%</text>
 </g>
 <g class="e" style="animation-delay:240ms">
 <circle cx="236" cy="144" r="4" fill="#3572A5"/>
-<text x="247" y="148" class="small fnt">Python 6.3%</text>
+<text x="247" y="148" class="small fnt">Python 9.2%</text>
 </g>
 <g class="e" style="animation-delay:270ms">
 <circle cx="336" cy="144" r="4" fill="#e34c26"/>
-<text x="347" y="148" class="small fnt">HTML 6.0%</text>
+<text x="347" y="148" class="small fnt">HTML 5.8%</text>
 </g>
 <g class="e" style="animation-delay:300ms">
 <circle cx="423" cy="144" r="4" fill="#663399"/>
-<text x="434" y="148" class="small fnt">CSS 4.8%</text>
+<text x="434" y="148" class="small fnt">CSS 4.6%</text>
 </g>
 <text x="880" y="148" class="small fnt mono" text-anchor="end" opacity=".8">updated daily</text>
 </svg>

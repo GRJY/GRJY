@@ -168,6 +168,52 @@ def flagship(theme):
     return "flagship", p
 
 
+
+# ----------------------------------------------------------------- apps
+
+SCREENS = [
+    ("screen-4558.jpg", "Valego Kurumsal", "Launch"),
+    ("screen-4559.jpg", "Valego Kurumsal", "Operations dashboard"),
+    ("screen-4561.jpg", "Business Turkey", "Onboarding"),
+    ("screen-4560.jpg", "Business Turkey", "Marketplace feed"),
+]
+
+PHONE_W = 190
+PHONE_H = 414          # 19.5:9, the iPhone aspect the screenshots were taken at
+PHONE_GAP = 22
+
+
+def apps(theme):
+    top = 46
+    caption = top + PHONE_H + 26
+    h = caption + 38
+    left = (W - (len(SCREENS) * PHONE_W + (len(SCREENS) - 1) * PHONE_GAP)) // 2
+
+    p = open_svg(h, "Shipped apps — Valego Kurumsal and Business Turkey on iOS", theme)
+    p += eyebrow_row(0, 22, "SHIPPED TO THE APP STORE", W)
+    for i, (shot, app, screen) in enumerate(SCREENS):
+        x = left + i * (PHONE_W + PHONE_GAP)
+        data = base64.b64encode((ASSETS / shot).read_bytes()).decode()
+        p.append(f'<defs><clipPath id="sc{i}">'
+                 f'<rect x="{x + 5}" y="{top + 5}" width="{PHONE_W - 10}" '
+                 f'height="{PHONE_H - 10}" rx="22"/></clipPath></defs>')
+        p.append(f'<g class="e"{delay(STEP + i * STEP)}>')
+        p.append(f'<rect x="{x}" y="{top}" width="{PHONE_W}" height="{PHONE_H}" rx="27" '
+                 f'class="surf line-s" stroke-width="1.5"/>')
+        p.append(f'<image clip-path="url(#sc{i})" x="{x + 5}" y="{top + 5}" '
+                 f'width="{PHONE_W - 10}" height="{PHONE_H - 10}" '
+                 f'preserveAspectRatio="xMidYMid slice" '
+                 f'href="data:image/jpeg;base64,{data}"/>')
+        # Dynamic Island, so the frame reads as the device the screenshot came from.
+        p.append(f'<rect x="{x + PHONE_W // 2 - 24}" y="{top + 13}" width="48" height="13" '
+                 f'rx="6.5" fill="#000000"/>')
+        p.append(txt(x, caption, app, cls="title fg"))
+        p.append(txt(x, caption + 17, screen, cls="small fnt"))
+        p.append('</g>')
+    p.append("</svg>")
+    return "apps", p
+
+
 # ------------------------------------------------------------ showcase
 
 GROUPS = [
@@ -529,7 +575,8 @@ if __name__ == "__main__":
     print("rendering cards:")
     user = fetch_stats() if TOKEN else None
     for theme in ("dark", "light"):
-        for builder in (hero, capabilities, flagship, showcase, linkedin, credentials):
+        for builder in (hero, capabilities, flagship, apps, showcase, linkedin,
+                        credentials):
             name, parts = builder(theme)
             write(f"{name}-{theme}", parts)
         if user:

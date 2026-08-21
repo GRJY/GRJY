@@ -8,7 +8,8 @@
 
 **Live client platforms** — [kozmonet.com.tr](https://kozmonet.com.tr) · [valego.com.tr](https://valego.com.tr) · [iremkalkanpromakeup.com](https://iremkalkanpromakeup.com) · [businessturkiye.co](https://businessturkiye.co)
 
-<a href="https://www.linkedin.com/in/giray-akbulut-33a695219/"><img src="./assets/linkedin-dark.svg#gh-dark-mode-only" width="880" alt="LinkedIn — Giray Akbulut"/><img src="./assets/linkedin-light.svg#gh-light-mode-only" width="880" alt="LinkedIn — Giray Akbulut"/></a>
+<a href="https://www.linkedin.com/in/giray-akbulut-33a695219/#gh-dark-mode-only"><img src="./assets/linkedin-dark.svg" width="880" alt="LinkedIn — Giray Akbulut"/></a>
+<a href="https://www.linkedin.com/in/giray-akbulut-33a695219/#gh-light-mode-only"><img src="./assets/linkedin-light.svg" width="880" alt="LinkedIn — Giray Akbulut"/></a>
 
 ### Stack
 

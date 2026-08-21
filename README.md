@@ -4,13 +4,13 @@
 
 <img src="./assets/flagship-dark.svg#gh-dark-mode-only" width="880" alt="Flagship work — Valego and Business Turkey"/><img src="./assets/flagship-light.svg#gh-light-mode-only" width="880" alt="Flagship work — Valego and Business Turkey"/>
 
-<a href="https://valego.com.tr"><img src="./assets/chip-valego-web-dark.svg#gh-dark-mode-only" height="34" alt=""/><img src="./assets/chip-valego-web-light.svg#gh-light-mode-only" height="34" alt=""/></a>
-<a href="https://apps.apple.com/tr/app/valego-kurumsal/id6751805868"><img src="./assets/chip-valego-ios-dark.svg#gh-dark-mode-only" height="34" alt=""/><img src="./assets/chip-valego-ios-light.svg#gh-light-mode-only" height="34" alt=""/></a>
-<a href="https://play.google.com/store/apps/details?id=com.atomedya.dijitalvale"><img src="./assets/chip-valego-play-dark.svg#gh-dark-mode-only" height="34" alt=""/><img src="./assets/chip-valego-play-light.svg#gh-light-mode-only" height="34" alt=""/></a>
+<a href="https://valego.com.tr#gh-dark-mode-only"><img src="./assets/chip-valego-web-dark.svg" height="34" alt=""/></a><a href="https://valego.com.tr#gh-light-mode-only"><img src="./assets/chip-valego-web-light.svg" height="34" alt=""/></a>
+<a href="https://apps.apple.com/tr/app/valego-kurumsal/id6751805868#gh-dark-mode-only"><img src="./assets/chip-valego-ios-dark.svg" height="34" alt=""/></a><a href="https://apps.apple.com/tr/app/valego-kurumsal/id6751805868#gh-light-mode-only"><img src="./assets/chip-valego-ios-light.svg" height="34" alt=""/></a>
+<a href="https://play.google.com/store/apps/details?id=com.atomedya.dijitalvale#gh-dark-mode-only"><img src="./assets/chip-valego-play-dark.svg" height="34" alt=""/></a><a href="https://play.google.com/store/apps/details?id=com.atomedya.dijitalvale#gh-light-mode-only"><img src="./assets/chip-valego-play-light.svg" height="34" alt=""/></a>
 
-<a href="https://businessturkiye.co"><img src="./assets/chip-bt-web-dark.svg#gh-dark-mode-only" height="34" alt=""/><img src="./assets/chip-bt-web-light.svg#gh-light-mode-only" height="34" alt=""/></a>
-<a href="https://apps.apple.com/app/id6784730300"><img src="./assets/chip-bt-ios-dark.svg#gh-dark-mode-only" height="34" alt=""/><img src="./assets/chip-bt-ios-light.svg#gh-light-mode-only" height="34" alt=""/></a>
-<a href="https://play.google.com/store/apps/details?id=com.atomedya.btapp"><img src="./assets/chip-bt-play-dark.svg#gh-dark-mode-only" height="34" alt=""/><img src="./assets/chip-bt-play-light.svg#gh-light-mode-only" height="34" alt=""/></a>
+<a href="https://businessturkiye.co#gh-dark-mode-only"><img src="./assets/chip-bt-web-dark.svg" height="34" alt=""/></a><a href="https://businessturkiye.co#gh-light-mode-only"><img src="./assets/chip-bt-web-light.svg" height="34" alt=""/></a>
+<a href="https://apps.apple.com/app/id6784730300#gh-dark-mode-only"><img src="./assets/chip-bt-ios-dark.svg" height="34" alt=""/></a><a href="https://apps.apple.com/app/id6784730300#gh-light-mode-only"><img src="./assets/chip-bt-ios-light.svg" height="34" alt=""/></a>
+<a href="https://play.google.com/store/apps/details?id=com.atomedya.btapp#gh-dark-mode-only"><img src="./assets/chip-bt-play-dark.svg" height="34" alt=""/></a><a href="https://play.google.com/store/apps/details?id=com.atomedya.btapp#gh-light-mode-only"><img src="./assets/chip-bt-play-light.svg" height="34" alt=""/></a>
 
 <img src="./assets/apps-dark.svg#gh-dark-mode-only" width="880" alt="Shipped apps — Valego Kurumsal and Business Turkey"/><img src="./assets/apps-light.svg#gh-light-mode-only" width="880" alt="Shipped apps — Valego Kurumsal and Business Turkey"/>
 

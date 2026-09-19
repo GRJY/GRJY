@@ -57,7 +57,7 @@
 <text x="452" y="96" class="small fnt">Public repositories</text>
 </g>
 <g class="e" style="animation-delay:180ms">
-<text x="678" y="76" class="metric fg">12</text>
+<text x="678" y="76" class="metric fg">13</text>
 <text x="678" y="96" class="small fnt">Total stars</text>
 </g>
 <g class="grow" style="animation-delay:135ms">

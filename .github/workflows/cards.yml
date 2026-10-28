@@ -11,9 +11,24 @@ permissions:
 jobs:
   stats:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+
+      # The commit grid walks every repository the token can reach, private
+      # and organisation work included — GITHUB_TOKEN only sees this repo, so
+      # it needs STATS_TOKEN (classic PAT, `repo` scope). Without it the grid
+      # keeps its last render instead of collapsing to public work.
+      - name: Regenerate the commit grid
+        env:
+          GH_TOKEN: ${{ secrets.STATS_TOKEN }}
+          PROFILE_LOGIN: ${{ github.repository_owner }}
+        run: |
+          if [[ -z "$GH_TOKEN" ]]; then
+            echo "::warning::STATS_TOKEN is not set — commit grid not refreshed"
+          else
+            python3 scripts/gen_contributions.py
+          fi
 
       - name: Regenerate the stats card
         env:

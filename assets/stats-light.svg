@@ -45,11 +45,11 @@
 <rect x="241" y="18" width="639" height="1" class="line-f"/>
 </g>
 <g class="e" style="animation-delay:45ms">
-<text x="0" y="76" class="metric fg">31</text>
+<text x="0" y="76" class="metric fg">44</text>
 <text x="0" y="96" class="small fnt">Repositories worked in</text>
 </g>
 <g class="e" style="animation-delay:90ms">
-<text x="226" y="76" class="metric fg">27</text>
+<text x="226" y="76" class="metric fg">40</text>
 <text x="226" y="96" class="small fnt">Private repositories</text>
 </g>
 <g class="e" style="animation-delay:135ms">
@@ -63,31 +63,31 @@
 <g class="grow" style="animation-delay:135ms">
 <defs><clipPath id="barclip"><rect x="0" y="118" width="880" height="6" rx="3"/></clipPath></defs>
 <g clip-path="url(#barclip)">
-<rect x="0.0" y="118" width="531.8" height="6" fill="#F05138"/>
-<rect x="531.8" y="118" width="161.2" height="6" fill="#f1e05a"/>
-<rect x="693.0" y="118" width="97.0" height="6" fill="#3572A5"/>
-<rect x="789.9" y="118" width="50.3" height="6" fill="#e34c26"/>
-<rect x="840.3" y="118" width="39.7" height="6" fill="#663399"/>
+<rect x="0.0" y="118" width="267.3" height="6" fill="#4F5D95"/>
+<rect x="267.3" y="118" width="220.2" height="6" fill="#8b949e"/>
+<rect x="487.5" y="118" width="204.8" height="6" fill="#f7523f"/>
+<rect x="692.3" y="118" width="124.6" height="6" fill="#3178c6"/>
+<rect x="816.9" y="118" width="63.1" height="6" fill="#563d7c"/>
 </g></g>
 <g class="e" style="animation-delay:180ms">
-<circle cx="4" cy="144" r="4" fill="#F05138"/>
-<text x="15" y="148" class="small fnt">Swift 60.4%</text>
+<circle cx="4" cy="144" r="4" fill="#4F5D95"/>
+<text x="15" y="148" class="small fnt">PHP 30.4%</text>
 </g>
 <g class="e" style="animation-delay:210ms">
-<circle cx="104" cy="144" r="4" fill="#f1e05a"/>
-<text x="115" y="148" class="small fnt">JavaScript 18.3%</text>
+<circle cx="91" cy="144" r="4" fill="#8b949e"/>
+<text x="102" y="148" class="small fnt">Dart 25.0%</text>
 </g>
 <g class="e" style="animation-delay:240ms">
-<circle cx="236" cy="144" r="4" fill="#3572A5"/>
-<text x="247" y="148" class="small fnt">Python 11.0%</text>
+<circle cx="185" cy="144" r="4" fill="#f7523f"/>
+<text x="196" y="148" class="small fnt">Blade 23.3%</text>
 </g>
 <g class="e" style="animation-delay:270ms">
-<circle cx="342" cy="144" r="4" fill="#e34c26"/>
-<text x="353" y="148" class="small fnt">HTML 5.7%</text>
+<circle cx="285" cy="144" r="4" fill="#3178c6"/>
+<text x="296" y="148" class="small fnt">TypeScript 14.2%</text>
 </g>
 <g class="e" style="animation-delay:300ms">
-<circle cx="429" cy="144" r="4" fill="#663399"/>
-<text x="440" y="148" class="small fnt">CSS 4.5%</text>
+<circle cx="417" cy="144" r="4" fill="#563d7c"/>
+<text x="428" y="148" class="small fnt">CSS 7.2%</text>
 </g>
 <text x="880" y="148" class="small fnt mono" text-anchor="end" opacity=".8">updated daily</text>
 </svg>

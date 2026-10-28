@@ -224,7 +224,7 @@ def chip(name, label, icon, theme):
 
 SCREENS = [
     ("screen-4558.jpg", "Valego Kurumsal", "Launch"),
-    ("screen-4559.jpg", "Valego Kurumsal", "Operations dashboard"),
+    ("screen-soforlu-teslim.jpg", "Valego Kurumsal", "Chauffeur drop-off request"),
     ("screen-4561.jpg", "Business Turkey", "Onboarding"),
     ("screen-4560.jpg", "Business Turkey", "Marketplace feed"),
 ]
